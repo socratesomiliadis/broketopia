@@ -102,3 +102,7 @@ a {
 .video-block {
 -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
+
+.scrollTop{
+  transform: translate3d(0, -16rem, 0);
+}

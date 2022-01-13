@@ -3,14 +3,17 @@ import { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
 
+
 export default function Home() {
+
+  
   
   const [scrollY, setScrollY] = useState(0);
   const [height, setHeight] = useState(0);
+  const [testHeight, setTestHeight] = useState(0);
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-
 
     var r = document.querySelector(':root');
 
@@ -33,7 +36,7 @@ export default function Home() {
       setWidth(`w-[${100 - (window.scrollY * 0.1)}vw]`);
     };
 
-    
+    setTestHeight(document.querySelector('body').offsetHeight);    
 
     // just trigger this so that the initial state 
     // is updated as soon as the component is mounted
@@ -74,9 +77,7 @@ export default function Home() {
 
             fcItem.classList.remove("focus");
         }
-    })
-      
-    };
+    })};
 
     const ioConfiguration = {
       /**
@@ -162,7 +163,7 @@ export default function Home() {
         </div>
         <div className="timeline-item py-32">
           <div className="tl-left"></div>
-          <div className="tl-center"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+          <div className="tl-center"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis {testHeight}</span></div>
           <div className="tl-right"></div>
         </div>
         <div className="timeline-item py-32 ">
@@ -176,6 +177,7 @@ export default function Home() {
           <div className="tl-right"></div>
         </div>
       </div>
+     
       </main>
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
     </Fragment>
