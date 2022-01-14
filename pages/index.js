@@ -59,18 +59,22 @@ export default function Home() {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
             const tlItem=entry.target;
-            const tlImageBox = entry.target.closest(".timeline-item").children[0].children[0].children[0];
+            const tlImageBox = undefined;
+            if(entry.target.closest(".timeline-item").children[0].children[0] != undefined) {tlImageBox = entry.target.closest(".timeline-item").children[0].children[0].children[0];}
+            else{tlImageBox = entry.target.closest(".timeline-item").children[2].children[0].children[0];}
 
             tlItem.classList.add("focus");
-            tlImageBox.classList.add("box-animate");
+            if(tlImageBox != null){tlImageBox.classList.add("box-animate");}
             
             play(); 
         }else if(entry.boundingClientRect.top > 0){
             const tlItem=entry.target;
-            const tlImageBox = entry.target.closest(".timeline-item").children[0].children[0].children[0];
+            const tlImageBox = undefined;
+            if(entry.target.closest(".timeline-item").children[0].children[0] != undefined) {tlImageBox = entry.target.closest(".timeline-item").children[0].children[0].children[0];}
+            else{tlImageBox = entry.target.closest(".timeline-item").children[2].children[0].children[0];}
 
             tlItem.classList.remove("focus");
-            tlImageBox.classList.remove("box-animate");
+            if(tlImageBox != null){tlImageBox.classList.remove("box-animate");}
        
         }
     })};
@@ -96,7 +100,7 @@ export default function Home() {
     })};
 
     const ioConfiguration = {
-      rootMargin: '10% 0% -49% 0%',
+      rootMargin: '0% 0% -51% 0%',
       threshold: [0]
     };
 
@@ -145,9 +149,9 @@ export default function Home() {
         <p className="py-6 focus-target">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       </div>
       </section> 
-      <div id="tl-wrapper" className="timeline-wrapper font-Outfit font-normal text-xl flex flex-col items-center h-[4000px]">
-      <div className="timeline-progress w-[2px] h-[150%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute -z-10"><div className="timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] -z-10"></div></div>
-        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
+      <div id="tl-wrapper" className="timeline-wrapper font-Outfit font-normal text-xl flex flex-col items-center h-[6500px]">
+      <div className="timeline-progress w-[2px] h-[450%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute -z-10"><div className="timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] -z-10"></div></div>
+        <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
             <div className="tl-left w-1/2 flex flex-col items-center justify-center">
               <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
@@ -160,16 +164,17 @@ export default function Home() {
             <div className="tl-right w-1/2 flex items-center justify-center"></div>
           </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div className="tl-image-wrapper">
+          <div className="tl-left w-1/2 flex flex-col items-center justify-center"> 
+          </div>
+          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+          <div className="tl-right w-1/2 flex items-center justify-center">
+          <div className="tl-image-wrapper">
               <div className="tl-image-box"></div>
               <div>
               <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
               </div>
             </div>
           </div>
-          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-          <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center">
@@ -184,16 +189,16 @@ export default function Home() {
           <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div className="tl-image-wrapper">
+          <div className="tl-left w-1/2 flex flex-col items-center justify-center"></div>
+          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+          <div className="tl-right w-1/2 flex items-center justify-center">
+          <div className="tl-image-wrapper">
               <div className="tl-image-box"></div>
               <div>
               <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
               </div>
             </div>
           </div>
-          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-          <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center">
