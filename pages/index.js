@@ -149,10 +149,10 @@ export default function Home() {
       <div className="timeline-progress w-[2px] h-[150%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute -z-10"><div className="timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] -z-10"></div></div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
             <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-              <div class="tl-image-wrapper">
-                <div class="tl-image-box"></div>
+              <div className="tl-image-wrapper">
+                <div className="tl-image-box"></div>
                 <div>
-                <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+                <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
                 </div>
               </div>
             </div>
@@ -161,10 +161,10 @@ export default function Home() {
           </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div class="tl-image-wrapper">
-              <div class="tl-image-box"></div>
+            <div className="tl-image-wrapper">
+              <div className="tl-image-box"></div>
               <div>
-              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
               </div>
             </div>
           </div>
@@ -173,10 +173,10 @@ export default function Home() {
         </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div class="tl-image-wrapper">
-              <div class="tl-image-box"></div>
+            <div className="tl-image-wrapper">
+              <div className="tl-image-box"></div>
               <div>
-              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
               </div>
             </div>
           </div>
@@ -185,10 +185,10 @@ export default function Home() {
         </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div class="tl-image-wrapper">
-              <div class="tl-image-box"></div>
+            <div className="tl-image-wrapper">
+              <div className="tl-image-box"></div>
               <div>
-              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
               </div>
             </div>
           </div>
@@ -197,10 +197,10 @@ export default function Home() {
         </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div class="tl-image-wrapper">
-              <div class="tl-image-box"></div>
+            <div className="tl-image-wrapper">
+              <div className="tl-image-box"></div>
               <div>
-              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
               </div>
             </div>
           </div>
