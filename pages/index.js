@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
+import {gsap, Power3} from 'gsap';
 
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
+
+    
 
     var r = document.querySelector(':root');
 
@@ -56,9 +59,35 @@ export default function Home() {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
             const tlItem=entry.target;
+            const tlImageBox = entry.target.closest(".timeline-item").children[0].children[0].children[0];
 
             tlItem.classList.add("focus");
+            tlImageBox.classList.add("box-animate");
+            
             play(); 
+        }else if(entry.boundingClientRect.top > 0){
+            const tlItem=entry.target;
+            const tlImageBox = entry.target.closest(".timeline-item").children[0].children[0].children[0];
+
+            tlItem.classList.remove("focus");
+            tlImageBox.classList.remove("box-animate");
+       
+        }
+    })};
+
+    window.onscroll = function(e) {
+      // print "false" if direction is down and "true" if up
+      var check = this.oldScroll > this.scrollY
+      this.oldScroll = this.scrollY;
+      return check;
+    }
+
+    const focusCB = (entries) => {
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            const tlItem=entry.target;
+
+            tlItem.classList.add("focus");
         }else{
             const tlItem=entry.target;
 
@@ -66,56 +95,23 @@ export default function Home() {
         }
     })};
 
-    const focusToggle = (entries) => {
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            const fcItem=entry.target;
-
-            fcItem.classList.add("focus"); 
-        }else{
-            const fcItem=entry.target;
-
-            fcItem.classList.remove("focus");
-        }
-    })};
-
     const ioConfiguration = {
-      /**
-       * This rootMargin creates a horizontal line vertically centered
-       * that will help trigger an intersection at that the very point.
-       */
-      rootMargin: '-0% 0% -51% 0%',
-    
-      /**
-       * This is the default so you could remove it.
-       * I just wanted to leave it here to make it more explicit
-       * as this threshold is the only one that works with the above
-       * rootMargin
-       */
-      threshold: 0
+      rootMargin: '10% 0% -49% 0%',
+      threshold: [0]
     };
 
     const ioConfiguration2 = {
-      /**
-       * This rootMargin creates a horizontal line vertically centered
-       * that will help trigger an intersection at that the very point.
-       */
-      rootMargin: '-49% 0% -51% 0%',
-    
-      /**
-       * This is the default so you could remove it.
-       * I just wanted to leave it here to make it more explicit
-       * as this threshold is the only one that works with the above
-       * rootMargin
-       */
-      threshold: 0
+      rootMargin: '-49% 0% -50% 0%',
+      threshold: [0]
     };
+    
     
     const observer = new IntersectionObserver(elementHasIntersected, ioConfiguration);
     multipleTargets.forEach((target) => observer.observe(target));
+    const focusObbserver = new IntersectionObserver(focusCB, ioConfiguration2);
+    focusTargets.forEach((target) => focusObbserver.observe(target));
 
-    const observerFocus = new IntersectionObserver(focusToggle, ioConfiguration2);
-    focusTargets.forEach((target) => observerFocus.observe(target));
+    
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -150,33 +146,68 @@ export default function Home() {
       </div>
       </section> 
       <div id="tl-wrapper" className="timeline-wrapper font-Outfit font-normal text-xl flex flex-col items-center h-[4000px]">
-      <div className="timeline-progress w-[2px] h-[135%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute -z-10"><div className="timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] -z-10"></div></div>
+      <div className="timeline-progress w-[2px] h-[150%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute -z-10"><div className="timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] -z-10"></div></div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="tl-left"></div>
-          <div className="tl-center"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-          <div className="tl-right"></div>
+            <div className="tl-left w-1/2 flex flex-col items-center justify-center">
+              <div class="tl-image-wrapper">
+                <div class="tl-image-box"></div>
+                <div>
+                <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+                </div>
+              </div>
+            </div>
+            <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+            <div className="tl-right w-1/2 flex items-center justify-center"></div>
+          </div>
+        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
+          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
+            <div class="tl-image-wrapper">
+              <div class="tl-image-box"></div>
+              <div>
+              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              </div>
+            </div>
+          </div>
+          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+          <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
-        <div className="timeline-item py-32">
-          <div className="tl-left"></div>
-          <div className="tl-center"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-          <div className="tl-right"></div>
+        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
+          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
+            <div class="tl-image-wrapper">
+              <div class="tl-image-box"></div>
+              <div>
+              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              </div>
+            </div>
+          </div>
+          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+          <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
-        <div className="timeline-item py-32">
-          <div className="tl-left"></div>
-          <div className="tl-center"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis {testHeight}</span></div>
-          <div className="tl-right"></div>
+        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
+          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
+            <div class="tl-image-wrapper">
+              <div class="tl-image-box"></div>
+              <div>
+              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              </div>
+            </div>
+          </div>
+          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+          <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
-        <div className="timeline-item py-32 ">
-          <div className="tl-left"></div>
-          <div className="tl-center"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-          <div className="tl-right"></div>
+        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
+          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
+            <div class="tl-image-wrapper">
+              <div class="tl-image-box"></div>
+              <div>
+              <Image class="tl-image" src="/static/images/npc.png" width="615" height="903" />
+              </div>
+            </div>
+          </div>
+          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
+          <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
-        <div className="timeline-item py-32 ">
-          <div className="tl-left"></div>
-          <div className="tl-center"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-          <div className="tl-right"></div>
         </div>
-      </div>
      
       </main>
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
@@ -187,3 +218,29 @@ export default function Home() {
 /*{ scrollY > (height * 0.75) && scrollY < (height * 0.95)
         ? "py-6 focus"
         : "py-6"}*/
+
+
+/*const animate = (entries) => {
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.timeline.play();
+        }else{
+          entry.target.timeline.reverse();
+        }
+    })};
+
+    const ioConfiguration2 = {
+
+      rootMargin: '-0% 0% -50% 0%',
+      threshold: 0
+    };
+
+    const observerFocus = new IntersectionObserver(animate, ioConfiguration2);
+    
+    var animations = document.querySelectorAll(".tl-image-box");
+
+    animations.forEach(target => {
+      target.timeline = gsap.timeline();
+      target.timeline.to(target, {duration: 1.2, y: '100%'})
+      observerFocus.observe(target);
+    })*/
