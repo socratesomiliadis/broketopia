@@ -200,7 +200,7 @@ export default function Home() {
       </section> 
       </div>
       <div id="tl-wrapper" className="timeline-wrapper font-Outfit font-normal text-xl flex flex-col items-center h-[6500px]">
-      <div className="timeline-progress w-[2px] h-[325%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
+      <div className="timeline-progress w-[2px] h-[6500px] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
         <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
             <div className="tl-left w-1/2 flex flex-col items-end justify-center">
               <div className="tl-image-wrapper">
@@ -237,35 +237,48 @@ export default function Home() {
                 <div className="tl-image-cont rounded-2xl overflow-hidden">
                   <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
                   <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[11%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
-                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
+                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render2.png" width="615" height="903" />
                 </div>
               </div>
           </div>
         </div>
-        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-          <div className="tl-image-wrapper">
+        <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
+            <div className="tl-left w-1/2 flex flex-col items-end justify-center">
+              <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
                 <div className="tl-image-cont rounded-2xl overflow-hidden">
                   <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
                   <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
-                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
+                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render3.png" width="615" height="903" />
                 </div>
               </div>
+            </div>
+            <div className="tl-center flex items-center justify-center w-1/4"><span className="z-10 tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
+            <div className="tl-right w-1/2 flex flex-col items-start gap-32 opacity-0">
+              <p className="w-1/2 font-Outfit font-medium text-black dark:text-white text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
+              <div className="font-Outfit font-light text-black dark:text-white text-xl">
+                <p>Found in: Plateia</p>
+                <p>Quests: Market, NFT, Check, Broke</p>
+              </div>
+              
+            </div>
           </div>
-          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
-          <div className="tl-right w-1/2 flex items-center justify-center"></div>
-        </div>
-        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="tl-left w-1/2 flex flex-col items-center justify-center"></div>
-          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
-          <div className="tl-right w-1/2 flex items-center justify-center">
+          <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
+          <div className="opacity-0 tl-left w-1/2 flex flex-col items-end justify-center gap-32"> 
+            <p className="w-1/2 font-Outfit text-left font-medium text-black dark:text-white text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
+            <div className="font-Outfit font-light text-left text-black dark:text-white text-xl w-1/2">
+              <p>Found in: Plateia</p>
+              <p>Quests: Market, NFT, Check, Broke</p>
+            </div>
+          </div>
+          <div className="tl-center flex items-center justify-center w-1/4 z-10"><span className="z-10 tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
+          <div className="tl-right w-1/2 flex items-center justify-start">
           <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
                 <div className="tl-image-cont rounded-2xl overflow-hidden">
                   <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
-                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
-                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[11%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
+                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render4.png" width="615" height="903" />
                 </div>
               </div>
           </div>
