@@ -127,7 +127,7 @@ a {
 .tl-image-wrapper {
   overflow: hidden;
   position: relative;
-  width: 615px;
+  @apply w-[205px] md:w-[307.5px] xl:w-[500px];
   aspect-ratio: 615 / 903;
 }
 
