@@ -13,6 +13,7 @@ export default function Home() {
   const [height, setHeight] = useState(0);
   const [testHeight, setTestHeight] = useState(0);
   const [width, setWidth] = useState(0);
+  let sliderItem = useRef();
 
   useEffect(() => {
 
@@ -51,6 +52,16 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
 
     window.addEventListener("scroll", handleWidth);
+
+    window.onclick = e => {
+      if(e.target.classList.contains("slider-option")){
+       document.querySelectorAll(".slider-option").forEach(entry =>{
+        entry.classList.remove("active");
+       })
+       
+       e.target.classList.add("active");
+      }
+  } 
   
     const multipleTargets = document.querySelectorAll('.tl-animate');
     const focusTargets = document.querySelectorAll('.focus-target');
@@ -165,6 +176,8 @@ export default function Home() {
 
     
 
+    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("scroll", handleWidth);
@@ -175,6 +188,11 @@ export default function Home() {
   function play() {
     var audio = document.getElementById('nobSound');
     audio.play();
+  }
+
+  function sliderTest(){
+    document.querySelector(".option").classList.remove("active");
+    this.classList.add("active");
   }
 
   return (
@@ -199,8 +217,8 @@ export default function Home() {
       </div>
       </section> 
       </div>
-      <div id="tl-wrapper" className="timeline-wrapper font-Outfit font-normal text-xl flex flex-col items-center h-[6500px]">
-      <div className="timeline-progress w-[2px] h-[6500px] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
+      <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-center">
+      <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
         <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
             <div className="tl-left w-1/2 flex flex-col items-end justify-center">
               <div className="tl-image-wrapper">
@@ -283,6 +301,58 @@ export default function Home() {
               </div>
           </div>
         </div>
+        </div>
+        <div className="flex items-center justify-center py-96 relative bg-white dark:bg-black z-10">
+          <div className="options">
+            <div className="slider-option active slider-first">
+                <div className="shadow"></div>
+                <div className="label">
+                  <div className="icon">
+                      <i className="fas fa-walking"></i>
+                  </div>
+                  <div className="info">
+                      <div className="main">Blonkisoaz</div>
+                      <div className="sub">Omuke trughte a otufta</div>
+                  </div>
+                </div>
+            </div>
+            <div className="slider-option slider-second" >
+                <div className="shadow"></div>
+                <div className="label">
+                  <div className="icon">
+                      <i className="fas fa-snowflake"></i>
+                  </div>
+                  <div className="info">
+                      <div className="main">Oretemauw</div>
+                      <div className="sub">Omuke trughte a otufta</div>
+                  </div>
+                </div>
+            </div>
+            <div className="slider-option slider-third" >
+                <div className="shadow"></div>
+                <div className="label">
+                  <div className="icon">
+                      <i className="fas fa-tree"></i>
+                  </div>
+                  <div className="info">
+                      <div className="main">Iteresuselle</div>
+                      <div className="sub">Omuke trughte a otufta</div>
+                  </div>
+                </div>
+            </div>
+            <div className="slider-option slider-fourth" >
+                <div className="shadow"></div>
+                <div className="label">
+                  <div className="icon">
+                      <i className="fas fa-tint"></i>
+                  </div>
+                  <div className="info">
+                      <div className="main">Idiefe</div>
+                      <div className="sub">Omuke trughte a otufta</div>
+                  </div>
+                </div>
+            </div>
+          </div>
         </div>
      
       </main>

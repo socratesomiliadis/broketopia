@@ -7,6 +7,7 @@
     src: local('BlenderPro'), url(/static/fonts/BlenderPro-Book.woff2) format("woff2");
   font-weight: 400;
 }
+@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
 @font-face {
   font-family: "BlenderPro";
   src: local('BlenderPro'), url(/static/fonts/BlenderPro-Medium.woff2) format("woff2");
@@ -60,7 +61,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     z-index: -100;
-    @apply bg-white dark:bg-black
+    @apply bg-white dark:bg-black;
+  height: 100%;
 }
 
 a {
@@ -174,4 +176,193 @@ a {
 
 .tl-left{
   transition: opacity 0.7s ease-out 0s;
+}
+
+ .credit {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: inherit;
+}
+ .options {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  min-width: 600px;
+  max-width: 1000px;
+  width: calc(100% - 100px);
+  height: 400px;
+}
+@media screen and (max-width: 718px) {
+   .options {
+    min-width: 520px;
+  }
+   .options .slider-option:nth-child(5) {
+    display: none;
+  }
+}
+@media screen and (max-width: 638px) {
+   .options {
+    min-width: 440px;
+  }
+   .options .slider-option:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 558px) {
+   .options {
+    min-width: 360px;
+  }
+   .options .slider-option:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 478px) {
+   .options {
+    min-width: 280px;
+  }
+   .options .slider-option:nth-child(2) {
+    display: none;
+  }
+}
+ .options .slider-option {
+  position: relative;
+  overflow: hidden;
+  min-width: 40px;
+  max-width: 40px;
+  margin: 10px;
+  background: #ED5565;
+  background-size: auto 120%;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+ .options .slider-option:nth-child(1) {
+  --defaultBackground:#ED5565;
+}
+ .options .slider-option:nth-child(2) {
+  --defaultBackground:#FC6E51;
+}
+ .options .slider-option:nth-child(3) {
+  --defaultBackground:#FFCE54;
+}
+ .options .slider-option:nth-child(4) {
+  --defaultBackground:#2ECC71;
+}
+ .options .slider-option:nth-child(5) {
+  --defaultBackground:#5D9CEC;
+}
+ .options .slider-option:nth-child(6) {
+  --defaultBackground:#AC92EC;
+}
+ .options .slider-option.active {
+  flex-grow: 10000;
+  transform: scale(1);
+  max-width: 900px;
+  margin: 0px;
+  border-radius: 40px;
+  background-size: auto 100%;
+  /*&:active {
+     transform:scale(0.9);
+  }*/
+}
+ .options .slider-option.active .shadow {
+  box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+}
+ .options .slider-option.active .label {
+  bottom: 20px;
+  left: 20px;
+}
+ .options .slider-option.active .label .info > div {
+  left: 0px;
+  opacity: 1;
+}
+ .options .slider-option:not(.active) {
+  flex-grow: 1;
+  border-radius: 30px;
+}
+ .options .slider-option:not(.active) .shadow {
+  bottom: -40px;
+  box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+ .options .slider-option:not(.active) .label {
+  bottom: 10px;
+  left: 100px;
+}
+ .options .slider-option:not(.active) .label .info > div {
+  left: 20px;
+  opacity: 0;
+}
+ .options .slider-option .shadow {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+ .options .slider-option .label {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  height: 40px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+ .options .slider-option .label .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  color: var(--defaultBackground);
+}
+ .options .slider-option .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  color: white;
+  white-space: pre;
+}
+ .options .slider-option .label .info > div {
+  position: relative;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+ .options .slider-option .label .info .main {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+ .options .slider-option .label .info .sub {
+  transition-delay: 0.1s;
+}
+
+.slider-first{
+  background: url(/static/images/renderFull.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
+}
+
+.slider-second{
+  background: url(/static/images/renderFull2.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
+}
+
+.slider-third{
+  background: url(/static/images/renderFull3.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
+}
+
+.slider-fourth{
+  background: url(/static/images/renderFull4.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
 }
