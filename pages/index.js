@@ -66,7 +66,6 @@ export default function Home() {
             tlItem.classList.add("focus");
             if(tlImageBox != null){tlImageBox.classList.add("box-animate");}
             
-            play(); 
         }else if(entry.boundingClientRect.top > 0){
             const tlItem=entry.target;
             const tlImageBox = undefined;
@@ -76,6 +75,13 @@ export default function Home() {
             tlItem.classList.remove("focus");
             if(tlImageBox != null){tlImageBox.classList.remove("box-animate");}
        
+        }
+    })};
+
+    const playSound = (entries) => {
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){   
+              play();
         }
     })};
 
@@ -108,10 +114,17 @@ export default function Home() {
       rootMargin: '-49% 0% -50% 0%',
       threshold: [0]
     };
+
+    const ioConfiguration3 = {
+      rootMargin: '-50% 0% -50% 0%',
+      threshold: [0]
+    };
     
     
     const observer = new IntersectionObserver(elementHasIntersected, ioConfiguration);
     multipleTargets.forEach((target) => observer.observe(target));
+    const soundObserver = new IntersectionObserver(playSound, ioConfiguration3);
+    multipleTargets.forEach((target) => soundObserver.observe(target));
     const focusObbserver = new IntersectionObserver(focusCB, ioConfiguration2);
     focusTargets.forEach((target) => focusObbserver.observe(target));
 
@@ -150,18 +163,27 @@ export default function Home() {
       </div>
       </section> 
       <div id="tl-wrapper" className="timeline-wrapper font-Outfit font-normal text-xl flex flex-col items-center h-[6500px]">
-      <div className="timeline-progress w-[2px] h-[450%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute -z-10"><div className="timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] -z-10"></div></div>
+      <div className="timeline-progress w-[2px] h-[325%] dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute -z-10"><div className="timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] -z-10"></div></div>
         <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
-            <div className="tl-left w-1/2 flex flex-col items-center justify-center">
+            <div className="tl-left w-1/2 flex flex-col items-end justify-center">
               <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
-                <div>
-                <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="absolute inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold text-white">Plateia</h2>
+                  <h2 className="absolute inset-0 z-[4] text-3xl ml-[4.5%] mt-[9%] font-Outfit font-light text-[#c9c9c9]">Downtown City</h2>
+                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
                 </div>
               </div>
             </div>
             <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-            <div className="tl-right w-1/2 flex items-center justify-center"></div>
+            <div className="tl-right w-1/2 flex flex-col items-start gap-32">
+              <p className="w-1/2 font-Outfit font-medium text-black dark:text-white text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
+              <div className="font-Outfit font-light text-black dark:text-white text-xl">
+                <p>Found in: Plateia</p>
+                <p>Quests: Market, NFT, Check, Broke</p>
+              </div>
+              
+            </div>
           </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center"> 
@@ -169,21 +191,25 @@ export default function Home() {
           <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
           <div className="tl-right w-1/2 flex items-center justify-center">
           <div className="tl-image-wrapper">
-              <div className="tl-image-box"></div>
-              <div>
-              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
+                <div className="tl-image-box"></div>
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="absolute inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold text-white">Plateia</h2>
+                  <h2 className="absolute inset-0 z-[4] text-3xl ml-[4.5%] mt-[9%] font-Outfit font-light text-[#c9c9c9]">Downtown City</h2>
+                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
+                </div>
               </div>
-            </div>
           </div>
         </div>
         <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
           <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div className="tl-image-wrapper">
-              <div className="tl-image-box"></div>
-              <div>
-              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
+          <div className="tl-image-wrapper">
+                <div className="tl-image-box"></div>
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="absolute inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold text-white">Plateia</h2>
+                  <h2 className="absolute inset-0 z-[4] text-3xl ml-[4.5%] mt-[9%] font-Outfit font-light text-[#c9c9c9]">Downtown City</h2>
+                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
+                </div>
               </div>
-            </div>
           </div>
           <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
           <div className="tl-right w-1/2 flex items-center justify-center"></div>
@@ -193,24 +219,14 @@ export default function Home() {
           <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
           <div className="tl-right w-1/2 flex items-center justify-center">
           <div className="tl-image-wrapper">
-              <div className="tl-image-box"></div>
-              <div>
-              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
+                <div className="tl-image-box"></div>
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="absolute inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold text-white">Plateia</h2>
+                  <h2 className="absolute inset-0 z-[4] text-3xl ml-[4.5%] mt-[9%] font-Outfit font-light text-[#c9c9c9]">Downtown City</h2>
+                <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
+                </div>
               </div>
-            </div>
           </div>
-        </div>
-        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="tl-left w-1/2 flex flex-col items-center justify-center">
-            <div className="tl-image-wrapper">
-              <div className="tl-image-box"></div>
-              <div>
-              <Image className="tl-image" src="/static/images/npc.png" width="615" height="903" />
-              </div>
-            </div>
-          </div>
-          <div className="tl-center flex items-center justify-center w-1/4"><span className="tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-[#121212]">Proxy Giorgakis</span></div>
-          <div className="tl-right w-1/2 flex items-center justify-center"></div>
         </div>
         </div>
      
