@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Fragment, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
-import {gsap, Power3} from 'gsap';
+import {gsap, Power3} from 'gsap'; 
 
 
 export default function Home() {
@@ -151,6 +151,7 @@ export default function Home() {
         }
     })};
 
+
     const ioConfiguration = {
       rootMargin: '0% 0% -51% 0%',
       threshold: [0]
@@ -165,6 +166,7 @@ export default function Home() {
       rootMargin: '-50% 0% -50% 0%',
       threshold: [0]
     };
+
     
     
     const observer = new IntersectionObserver(elementHasIntersected, ioConfiguration);
@@ -205,7 +207,7 @@ export default function Home() {
 
       <Navigation/>
       
-      <main> 
+      <main className="relative z-[1]"> 
       <div className="relative bg-white dark:bg-black z-10">
       <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
       <div className="relative h-[90vh]"><div className=" h-[25vh] lg:h-[90vh] mt-8 px-12 w-screen heroDiv sticky top-0"><video className="rounded-2xl video-block heroVid relative w-screen" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div>
@@ -217,7 +219,7 @@ export default function Home() {
       </div>
       </section> 
       </div>
-      <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-center">
+      <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-center bg-white dark:bg-black">
       <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
         <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
             <div className="tl-left w-1/2 flex flex-col items-end justify-center">
@@ -356,6 +358,10 @@ export default function Home() {
         </div>
      
       </main>
+
+      <footer className="sticky z-0 bottom-0 left-0 w-full h-screen flex flex-col bg-black dark:bg-white items-center justify-center">
+        <span className="font-Outfit font-bold text-white dark:text-black text-[16em]">Buy</span>
+      </footer>
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
     </Fragment>
   )

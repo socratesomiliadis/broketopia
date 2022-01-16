@@ -63,6 +63,7 @@ body {
     z-index: -100;
     @apply bg-white dark:bg-black;
   height: 100%;
+
 }
 
 a {
@@ -192,7 +193,7 @@ a {
   min-width: 600px;
   max-width: 1000px;
   width: calc(100% - 100px);
-  height: 400px;
+  height: 450px;
 }
 @media screen and (max-width: 718px) {
    .options {
@@ -229,8 +230,8 @@ a {
  .options .slider-option {
   position: relative;
   overflow: hidden;
-  min-width: 40px;
-  max-width: 40px;
+  min-width: 60px;
+  max-width: 60px;
   margin: 10px;
   background: #ED5565;
   background-size: auto 120%;
@@ -290,7 +291,7 @@ a {
 }
  .options .slider-option:not(.active) .label {
   bottom: 10px;
-  left: 100px;
+  left: 10px;
 }
  .options .slider-option:not(.active) .label .info > div {
   left: 20px;
@@ -366,3 +367,4 @@ a {
   background-size: auto 120% !important;
   background-position: center !important;
 }
+
