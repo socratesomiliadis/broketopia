@@ -59,6 +59,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    z-index: -100;
+    @apply bg-white dark:bg-black
 }
 
 a {
@@ -84,10 +86,6 @@ a {
 
 .heroDiv{
   transform: translateZ(0);
-}
-
-.headerBg{
-  @apply bg-white dark:bg-[#121212];
 }
 
 .timeline-wrapper{
@@ -143,7 +141,7 @@ a {
 }
 
 .tl-image-box{
-  @apply bg-white dark:bg-[#121212];
+  @apply bg-white dark:bg-black;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -156,4 +154,24 @@ a {
 
 .box-animate{
   transform: translateY(120%) !important;
+}
+
+.text-drop{
+  transform: translateY(0) !important;
+}
+
+.animEasing{
+  transition: transform 1s ease-out 0.05s  ;
+}
+
+.opacity-visible{
+  opacity: 1;
+}
+
+.tl-right{
+  transition: opacity 0.5s ease-out 0s;
+}
+
+.tl-left{
+  transition: opacity 0.5s ease-out 0s;
 }

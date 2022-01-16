@@ -52,7 +52,7 @@ export default function Navigation(){
         <Fragment>
         <nav className="sticky top-0 z-50 flex flex-row justify-between items-center -mt-[100px] pl-4 pr-12">
         <Image alt="broketopia" src="/static/images/BrokeTopiaLogo.svg" width="100" height="100"></Image>   
-        <div className="flex flex-row justify-center items-center gap-8"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200" target="_blank" rel="noreferrer" className="bg-white dark:bg-[#121212] font-BlenderPro font-bold text-xl border-[2px] px-[1.2rem] py-2 border-black dark:border-white hover:border-[#f8ef02] dark:hover:border-[#f8ef02] hover:text-[#f8ef02] rounded-full">Buy Now</a>{renderThemeChanger()}</div>
+        <div className="flex flex-row justify-center items-center gap-8"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200" target="_blank" rel="noreferrer" className="bg-white dark:bg-black font-BlenderPro font-bold text-xl border-[2px] px-[1.2rem] py-2 border-black dark:border-white hover:border-[#f8ef02] dark:hover:border-[#f8ef02] hover:text-[#f8ef02] rounded-full">Buy Now</a>{renderThemeChanger()}</div>
         </nav>
         </Fragment>
     )
