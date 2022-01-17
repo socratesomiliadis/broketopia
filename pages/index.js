@@ -168,7 +168,7 @@ export default function Home() {
     };
 
     const ioConfiguration2 = {
-      rootMargin: '-50% 0% -50% 0%',
+      rootMargin: '-50.5% 0% -49.5% 0%',
       threshold: [0]
     };
 
@@ -215,7 +215,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <div className="fixed flex flex-col justify-center items-center z-[200] inset-0 w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
+      <div className="fixed inset-0 flex flex-col justify-center items-center z-[200] inset-0 w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
       <svg height="100%" width="100%" strokeWidth="2" className="stroke-black dark:stroke-white text-line block">
         <text className="font-BlenderPro font-bold text-[12rem]" x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="none" fontSize = "2000">BrokeTopia</text>
       </svg>
@@ -325,9 +325,6 @@ export default function Home() {
             <div className="slider-option active slider-first">
                 <div className="shadow"></div>
                 <div className="label">
-                  <div className="icon">
-                      <i className="fas fa-walking"></i>
-                  </div>
                   <div className="info">
                       <div className="main-slider">Blonkisoaz</div>
                       <div className="sub-slider">Omuke trughte a otufta</div>
@@ -337,9 +334,6 @@ export default function Home() {
             <div className="slider-option slider-second" >
                 <div className="shadow"></div>
                 <div className="label">
-                  <div className="icon">
-                      <i className="fas fa-snowflake"></i>
-                  </div>
                   <div className="info">
                       <div className="main-slider">Oretemauw</div>
                       <div className="sub-slider">Omuke trughte a otufta</div>
@@ -349,9 +343,6 @@ export default function Home() {
             <div className="slider-option slider-third" >
                 <div className="shadow"></div>
                 <div className="label">
-                  <div className="icon">
-                      <i className="fas fa-tree"></i>
-                  </div>
                   <div className="info">
                       <div className="main-slider">Iteresuselle</div>
                       <div className="sub-slider">Omuke trughte a otufta</div>
@@ -361,9 +352,6 @@ export default function Home() {
             <div className="slider-option slider-fourth" >
                 <div className="shadow"></div>
                 <div className="label">
-                  <div className="icon">
-                      <i className="fas fa-tint"></i>
-                  </div>
                   <div className="info">
                       <div className="main-slider">Idiefe</div>
                       <div className="sub-slider">Omuke trughte a otufta</div>
@@ -376,7 +364,7 @@ export default function Home() {
       </main>
 
       <footer className="sticky z-0 bottom-0 left-0 w-full h-screen flex flex-col bg-black dark:bg-white items-center justify-start overflow-hidden">
-        <span className="z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black text-[16em]">Buy</span>
+        <span className=" z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black text-[16em]">Buy</span>
         <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
         <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%] "></div>
