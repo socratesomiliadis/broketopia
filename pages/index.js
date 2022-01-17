@@ -207,7 +207,7 @@ export default function Home() {
 
       <Navigation/>
       
-      <main className="relative z-[1]"> 
+      <main className="relative z-[10]"> 
       <div className="relative bg-white dark:bg-black z-10">
       <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
       <div className="relative h-[90vh]"><div className=" h-[25vh] lg:h-[90vh] mt-8 px-12 w-screen heroDiv sticky top-0"><video className="rounded-2xl video-block heroVid relative w-screen" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div>
@@ -360,233 +360,233 @@ export default function Home() {
       </main>
 
       <footer className="sticky z-0 bottom-0 left-0 w-full h-screen flex flex-col bg-black dark:bg-white items-center justify-start overflow-hidden">
-        <span className="z-50 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black text-[16em]">Buy</span>
-        <div className="flex flex-row flex-nowrap grow-0 shrink basis-auto gap-6 w-screen p-8">
-          <div>
-          <div className="overflow-hidden w-[300px] h-[300px] z-50"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><Image className="max-w-full hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render4.png" width="615" height="903" /></a></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#159</span>
+        <span className="z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black text-[16em]">Buy</span>
+        <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render4.png" width="615" height="903" /></a></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#159</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%] "></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-          <div className="overflow-hidden w-[300px] h-[300px] z-50"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/198" target="_blank" rel="noreferrer"><Image className="max-w-full hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render2.png" width="615" height="903" /></a></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#198</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
         </div>
-        <div className="flex flex-row flex-nowrap grow-0 shrink basis-auto gap-6 w-screen p-8">
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+        <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
+            </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/158" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" /></a></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#158</span>
+              </div>
+            </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
+            </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
+            </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
+            </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
+            </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
+            </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+          <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-          <div className="overflow-hidden w-[300px] h-[300px] z-50"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200" target="_blank" rel="noreferrer"><Image className="max-w-full hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render3.png" width="615" height="903" /></a></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#4200</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render3.png" width="615" height="903" /></a></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#4200</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
             </div>
-          </div>
+            <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="flex justify-between">
+                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+              </div>
+            </div>
         </div>
-        <div className="flex flex-row flex-nowrap grow-0 shrink basis-auto gap-6 w-screen p-8">
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+        <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+        <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
             </div>
           </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-row flex-nowrap grow-0 shrink basis-auto gap-6 w-screen p-8">
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div>
-            <div className="w-[300px] h-[300px] outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50"></div>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
               <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
               <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>

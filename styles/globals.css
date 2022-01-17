@@ -368,3 +368,12 @@ a {
   background-position: center !important;
 }
 
+.site-col:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 100%;
+  @apply outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50;
+}
