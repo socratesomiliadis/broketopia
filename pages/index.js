@@ -490,10 +490,10 @@ export default function Home() {
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-              <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/158" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" /></a></div>
+              <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/198" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" /></a></div>
               <div className="flex justify-between">
                 <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#158</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#198</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
