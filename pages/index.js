@@ -216,8 +216,8 @@ export default function Home() {
       </Head>
 
       <div className="absolute flex flex-col justify-center items-center z-[200] inset-0 w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
-      <svg height="100%" width="100%" stroke="#000" stroke-width="2" class="text-line block">
-        <text className="font-BlenderPro font-bold text-[12rem]" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="none" font-size = "2000">BrokeTopia</text>
+      <svg height="100%" width="100%" stroke="#000" strokeWidth="2" className="text-line block">
+        <text className="font-BlenderPro font-bold text-[12rem]" x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="none" fontSize = "2000">BrokeTopia</text>
       </svg>
       </div>
 
