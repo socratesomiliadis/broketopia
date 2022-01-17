@@ -2,7 +2,8 @@ import Head from 'next/head'
 import { Fragment, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
-import {gsap, Power3} from 'gsap'; 
+import {gsap, Power3} from 'gsap';
+import anime from 'animejs'; 
 
 
 export default function Home() {
@@ -17,7 +18,16 @@ export default function Home() {
 
   useEffect(() => {
 
-    
+    let prBody = document.querySelector('body');
+    let prWrapper = document.querySelector('.pr-wrapper');
+
+
+    prBody.classList.add("no-overflow");
+
+    const timer = setTimeout(() => {
+      prBody.classList.remove("no-overflow");
+      prWrapper.classList.add("pr-hide");
+    }, 2000);
 
     var r = document.querySelector(':root');
 
@@ -204,6 +214,12 @@ export default function Home() {
         <meta name="description" content="NFT Games" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+
+      <div className="absolute flex flex-col justify-center items-center z-[200] inset-0 w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
+      <svg height="100%" width="100%" stroke="#000" stroke-width="2" class="text-line block">
+        <text className="font-BlenderPro font-bold text-[12rem]" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="none" font-size = "2000">BrokeTopia</text>
+      </svg>
+      </div>
 
       <Navigation/>
       
@@ -405,10 +421,10 @@ export default function Home() {
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+              <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render3.png" width="615" height="903" /></a></div>
               <div className="flex justify-between">
                 <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#4200</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
@@ -514,10 +530,10 @@ export default function Home() {
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-              <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render3.png" width="615" height="903" /></a></div>
+              <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
                 <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#4200</span>
+                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">

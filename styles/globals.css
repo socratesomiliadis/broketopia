@@ -54,6 +54,18 @@
   --heroVidScale: 1;
 }
 
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.text-line text {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 1.5s linear forwards;
+}
+
 html,
 body {
   padding: 0;
@@ -75,7 +87,13 @@ a {
   box-sizing: border-box;
 }
 
+.no-overflow{
+  overflow: hidden !important;
+}
 
+.pr-hide{
+  transform: translateY(-100vh);
+}
 
 .focus{
   @apply text-[#000] dark:text-[#fff] !important;
