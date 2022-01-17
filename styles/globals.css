@@ -403,7 +403,7 @@ a {
   @apply font-Outfit font-light text-base text-[#d1d1d1] -mt-2;
 }
 
-footer {
+footer, nav {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
