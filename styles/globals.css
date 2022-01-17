@@ -395,3 +395,10 @@ a {
   height: 100%;
   @apply outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50;
 }
+
+.main-slider{
+  @apply font-Outfit font-normal text-lg text-white;
+}
+.sub-slider{
+  @apply font-Outfit font-light text-base text-[#d1d1d1] -mt-2;
+}
