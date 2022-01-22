@@ -93,6 +93,7 @@ export default function Home() {
   
     const multipleTargets = document.querySelectorAll('.tl-animate');
     const focusTargets = document.querySelectorAll('.focus-target');
+    const footerTarget = document.querySelectorAll('.options');
 
     const elementHasIntersected = (entries) => {
       entries.forEach(entry=>{
@@ -172,12 +173,30 @@ export default function Home() {
             const tlItem=entry.target;
 
             tlItem.classList.add("focus");
+            var pBar = document.querySelector(".timeline-progress-bar");
+
+            pBar.classList.remove("bar-invisible");
         }else{
             const tlItem=entry.target;
 
             tlItem.classList.remove("focus");
         }
     })};
+
+    const footerVis = (entries) => {
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            var pBar = document.querySelector(".timeline-progress-bar");
+
+            pBar.classList.add("bar-invisible");
+        }else if(entry.boundingClientRect.top > 0 && entry.boundingClientRect.top < 1000 ){
+            var pBar = document.querySelector(".timeline-progress-bar");
+
+            pBar.classList.remove("bar-invisible");
+
+        }
+    })};
+
 
 
     const ioConfiguration = {
@@ -195,6 +214,11 @@ export default function Home() {
       threshold: [0]
     };
 
+    const ioConfiguration4 = {
+      rootMargin: '-20% 0% -80% 0%',
+      threshold: [0]
+    };
+
     
     
     const observer = new IntersectionObserver(elementHasIntersected, ioConfiguration);
@@ -203,6 +227,8 @@ export default function Home() {
     multipleTargets.forEach((target) => soundObserver.observe(target));
     const focusObbserver = new IntersectionObserver(focusCB, ioConfiguration2);
     focusTargets.forEach((target) => focusObbserver.observe(target));
+    const footerObserver = new IntersectionObserver(footerVis, ioConfiguration4);
+    footerTarget.forEach((target) => footerObserver.observe(target));
 
     
 
@@ -252,7 +278,7 @@ export default function Home() {
       </section> 
       </div>
       <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-start lg:items-center pl-4 lg:pl-0 bg-white dark:bg-black">
-      <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
+      <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] bar-invisible timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
         <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
             <div className="order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center">
               <div className="tl-image-wrapper">
@@ -378,7 +404,8 @@ export default function Home() {
       </main>
 
       <footer className="sticky z-0 bottom-0 left-0 w-full h-[50vh] lg:h-screen flex flex-col bg-black dark:bg-white items-center justify-start overflow-hidden">
-        <span className="text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Buy</span>
+        <span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Buy</span>
+        <span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Now</span>
         <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
         <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%] "></div>
