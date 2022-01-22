@@ -52,7 +52,7 @@ export default function Navigation(){
         <Fragment>
         <nav className="absolute lg:sticky top-0 z-50 flex flex-row justify-between items-center mt-0 lg:-mt-[100px] pl-4 pr-12">
         <Image alt="broketopia" src="/static/images/BrokeTopiaLogo.svg" width="100" height="100"></Image>   
-        <div className="ml-10 lg:ml-0 flex flex-row justify-center items-center gap-8"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer" className="bg-white dark:bg-black text-black dark:text-white mix-blend-difference font-Outfit font-medium text-lg border-[2px] px-[1.2rem] py-2 border-black dark:border-white hover:border-[#e606d4] dark:hover:border-[#e606d4] hover:text-[#e606d4] dark:hover:text-[#e606d4] rounded-full">Buy Now</a>{renderThemeChanger()}</div>
+        <div className="ml-6 lg:ml-0 flex flex-row justify-center items-center gap-8"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer" className="bg-white dark:bg-black text-black dark:text-white mix-blend-difference font-Outfit font-medium text-lg border-[2px] px-[1.2rem] py-2 border-black dark:border-white hover:border-[#e606d4] dark:hover:border-[#e606d4] hover:text-[#e606d4] dark:hover:text-[#e606d4] rounded-full">Buy Now</a>{renderThemeChanger()}</div>
         </nav>
         </Fragment>
     )
