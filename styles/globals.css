@@ -430,7 +430,7 @@ a {
     opacity: 1;
   }
    .options .slider-option:not(.active) {
-    flex-grow: 0;
+    flex-grow: 1;
     max-height: 1px !important;
     -webkit-box-flex: 1;
     border-radius: 50px;
