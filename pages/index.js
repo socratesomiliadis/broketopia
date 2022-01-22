@@ -404,8 +404,8 @@ export default function Home() {
       </main>
 
       <footer className="sticky z-0 bottom-0 left-0 w-full h-[50vh] lg:h-screen flex flex-col bg-black dark:bg-white items-center justify-start overflow-hidden">
-        <span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Buy</span>
-        <span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Now</span>
+        <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Buy</span></a>
+        <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Now</span></a>
         <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
         <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%] "></div>
