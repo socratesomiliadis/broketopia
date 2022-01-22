@@ -278,7 +278,7 @@ export default function Home() {
       </section> 
       </div>
       <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-start lg:items-center pl-4 lg:pl-0 bg-white dark:bg-black">
-      <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] bar-invisible timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
+      <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
         <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
             <div className="order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center">
               <div className="tl-image-wrapper">
