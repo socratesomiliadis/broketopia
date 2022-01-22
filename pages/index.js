@@ -215,7 +215,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <div className="fixed inset-0 flex flex-col justify-center items-center z-[200] inset-0 w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
+      <div className="fixed inset-0 flex flex-col justify-center items-center z-[200] w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
       <svg height="100%" width="100%" strokeWidth="2" className="stroke-black dark:stroke-white text-line block">
         <text className="font-BlenderPro font-bold text-[12rem]" x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="none" fontSize = "2000">BrokeTopia</text>
       </svg>
@@ -226,7 +226,7 @@ export default function Home() {
       <main className="relative z-[10]"> 
       <div className="relative bg-white dark:bg-black z-10">
       <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
-      <div className="relative h-[90vh]"><div className=" h-[25vh] lg:h-[90vh] mt-8 px-12 w-screen heroDiv sticky top-0"><video className="rounded-2xl video-block heroVid relative w-screen" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div>
+      <div className="relative sm:h-[40vh] md:h-[60vh] lg:h-[90vh]"><div className="  lg:h-[90vh] mt-8 px-12 w-screen heroDiv sticky top-0"><video className="rounded-2xl video-block heroVid relative w-screen" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div>
       <div className="font-Outfit pt-24 pb-36 font-medium  text-2xl 2xl:w-1/3 w-9/12 md:w-8/12 lg:w-7/12 items-center text-[#bec0c5] dark:text-[#5a5a5a] ">
         <p id="test" className="pb-6 focus-target">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         <p className="py-6 focus-target">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -235,85 +235,83 @@ export default function Home() {
       </div>
       </section> 
       </div>
-      <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-center bg-white dark:bg-black">
+      <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-start lg:items-center pl-4 lg:pl-0 bg-white dark:bg-black">
       <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
-        <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
-            <div className="tl-left w-1/2 flex flex-col items-end justify-center">
+        <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+            <div className="order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center">
               <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
                 <div className="tl-image-cont rounded-2xl overflow-hidden">
-                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
-                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
                 <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" />
                 </div>
               </div>
             </div>
-            <div className="tl-center flex items-center justify-center w-1/4"><span className="z-10 tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
-            <div className="tl-right w-1/2 flex flex-col items-start gap-32 opacity-0">
-              <p className="w-1/2 font-Outfit font-medium text-black dark:text-white text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
-              <div className="font-Outfit font-light text-black dark:text-white text-xl">
+            <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4"><span className="lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
+            <div className="order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0">
+              <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
+              <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl">
                 <p>Found in: Plateia</p>
                 <p>Quests: Market, NFT, Check, Broke</p>
               </div>
-              
             </div>
           </div>
-        <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="opacity-0 tl-left w-1/2 flex flex-col items-end justify-center gap-32"> 
-            <p className="w-1/2 font-Outfit text-left font-medium text-black dark:text-white text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
-            <div className="font-Outfit font-light text-left text-black dark:text-white text-xl w-1/2">
+        <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+          <div className="order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0"> 
+            <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
+            <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4">
               <p>Found in: Plateia</p>
               <p>Quests: Market, NFT, Check, Broke</p>
             </div>
           </div>
-          <div className="tl-center flex items-center justify-center w-1/4 z-10"><span className="z-10 tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
-          <div className="tl-right w-1/2 flex items-center justify-start">
+          <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4"><span className="lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
+          <div className="order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center">
           <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
                 <div className="tl-image-cont rounded-2xl overflow-hidden">
-                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
-                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[11%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
                 <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render2.png" width="615" height="903" />
                 </div>
               </div>
           </div>
         </div>
-        <div className="timeline-item  flex flex-row justify-around items-center py-32 w-full">
-            <div className="tl-left w-1/2 flex flex-col items-end justify-center">
+        <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+            <div className="order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center">
               <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
                 <div className="tl-image-cont rounded-2xl overflow-hidden">
-                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
-                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
                 <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render3.png" width="615" height="903" />
                 </div>
               </div>
             </div>
-            <div className="tl-center flex items-center justify-center w-1/4"><span className="z-10 tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
-            <div className="tl-right w-1/2 flex flex-col items-start gap-32 opacity-0">
-              <p className="w-1/2 font-Outfit font-medium text-black dark:text-white text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
-              <div className="font-Outfit font-light text-black dark:text-white text-xl">
+            <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4"><span className="lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
+            <div className="order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0">
+              <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
+              <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl">
                 <p>Found in: Plateia</p>
                 <p>Quests: Market, NFT, Check, Broke</p>
               </div>
-              
             </div>
           </div>
-          <div className="timeline-item flex flex-row justify-around items-center py-32 w-full">
-          <div className="opacity-0 tl-left w-1/2 flex flex-col items-end justify-center gap-32"> 
-            <p className="w-1/2 font-Outfit text-left font-medium text-black dark:text-white text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
-            <div className="font-Outfit font-light text-left text-black dark:text-white text-xl w-1/2">
+          <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+          <div className="order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0"> 
+            <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">Complete your quests by going to the quest market in the market of the quest and complete any quests using the quest ability.</p>
+            <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4">
               <p>Found in: Plateia</p>
               <p>Quests: Market, NFT, Check, Broke</p>
             </div>
           </div>
-          <div className="tl-center flex items-center justify-center w-1/4 z-10"><span className="z-10 tl-animate py-4 px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
-          <div className="tl-right w-1/2 flex items-center justify-start">
+          <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4"><span className="lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">Proxy Giorgakis</span></div>
+          <div className="order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center">
           <div className="tl-image-wrapper">
                 <div className="tl-image-box"></div>
                 <div className="tl-image-cont rounded-2xl overflow-hidden">
-                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
-                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-3xl ml-[4.5%] mt-[11%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">Plateia</h2>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">Downtown City</h2>
                 <Image className="tl-image hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render4.png" width="615" height="903" />
                 </div>
               </div>
@@ -363,9 +361,9 @@ export default function Home() {
      
       </main>
 
-      <footer className="sticky z-0 bottom-0 left-0 w-full h-screen flex flex-col bg-black dark:bg-white items-center justify-start overflow-hidden">
-        <span className=" z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black text-[16em]">Buy</span>
-        <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+      <footer className="sticky z-0 bottom-0 left-0 w-full h-[50vh] lg:h-screen flex flex-col bg-black dark:bg-white items-center justify-start overflow-hidden">
+        <span className="text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Buy</span>
+        <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
         <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%] "></div>
               <div className="flex justify-between">
@@ -423,7 +421,7 @@ export default function Home() {
               </div>
             </div>
         </div>
-        <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+        <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
           <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
@@ -481,7 +479,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+          <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
           <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
@@ -539,7 +537,7 @@ export default function Home() {
               </div>
             </div>
         </div>
-        <div className="flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+        <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
         <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
             <div className="site-col block relative w-full h-0 pb-[100%]"></div>
             <div className="flex justify-between">
