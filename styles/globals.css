@@ -196,8 +196,351 @@ a {
 .tl-left{
   transition: opacity 0.7s ease-out 0s;
 }
+.credit {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: inherit;
+}
+ .options {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  max-width: 1000px;
+  width: calc(100% - 100px);
+  height: 450px;
+}
+ .options .slider-option {
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;
+  max-width: 60px;
+  margin: 10px;
+  background: #ED5565;
+  background-size: auto 120%;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+ .options .slider-option:nth-child(1) {
+  --defaultBackground:#ED5565;
+}
+ .options .slider-option:nth-child(2) {
+  --defaultBackground:#FC6E51;
+}
+ .options .slider-option:nth-child(3) {
+  --defaultBackground:#FFCE54;
+}
+ .options .slider-option:nth-child(4) {
+  --defaultBackground:#2ECC71;
+}
+ .options .slider-option:nth-child(5) {
+  --defaultBackground:#5D9CEC;
+}
+ .options .slider-option:nth-child(6) {
+  --defaultBackground:#AC92EC;
+}
+ .options .slider-option.active {
+  flex-grow: 10000;
+  transform: scale(1);
+  max-width: 900px;
+  margin: 0px;
+  border-radius: 40px;
+  background-size: auto 100%;
+  &:active {
+     transform:scale(0.9);
+  }
+}
+ .options .slider-option.active .shadow {
+  box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+}
+ .options .slider-option.active .label {
+  bottom: 20px;
+  left: 20px;
+}
+ .options .slider-option.active .label .info > div {
+  left: 0px;
+  opacity: 1;
+}
+ .options .slider-option:not(.active) {
+  flex-grow: 1;
+  border-radius: 30px;
+}
+ .options .slider-option:not(.active) .shadow {
+  bottom: -40px;
+  box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+ .options .slider-option:not(.active) .label {
+  bottom: 10px;
+  left: 10px;
+}
+ .options .slider-option:not(.active) .label .info > div {
+  left: 20px;
+  opacity: 0;
+}
+ .options .slider-option .shadow {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+ .options .slider-option .label {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  height: 40px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+ .options .slider-option .label .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  color: var(--defaultBackground);
+}
+ .options .slider-option .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  color: white;
+  white-space: pre;
+}
+ .options .slider-option .label .info > div {
+  position: relative;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+ .options .slider-option .label .info .main {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+ .options .slider-option .label .info .sub {
+  transition-delay: 0.1s;
+}
 
- .credit {
+.slider-first{
+  background: url(/static/images/renderFull.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
+}
+
+.slider-second{
+  background: url(/static/images/renderFull2.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
+}
+
+.slider-third{
+  background: url(/static/images/renderFull3.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
+}
+
+.slider-fourth{
+  background: url(/static/images/renderFull4.png) !important;
+  background-size: auto 120% !important;
+  background-position: center !important;
+}
+
+ @media screen and (max-width: 1024px) {
+  .credit {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: inherit;
+  }
+   .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center !important;
+    overflow: hidden;
+    max-width: 344px !important;
+    width: calc(100% - 100px);
+    height: fit-content;
+  }
+  .options .slider-option {
+    position: relative;
+    min-width: 280px;
+    overflow: hidden;
+    aspect-ratio: 615 / 903;
+    min-height: 40px;
+    background: #ED5565;
+    background-size: auto 120%;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    cursor: pointer;
+    z-index: 150;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  }
+   .options .slider-option:nth-child(1) {
+    --defaultBackground:#ED5565;
+  }
+   .options .slider-option:nth-child(2) {
+    --defaultBackground:#FC6E51;
+  }
+   .options .slider-option:nth-child(3) {
+    --defaultBackground:#FFCE54;
+  }
+   .options .slider-option:nth-child(4) {
+    --defaultBackground:#2ECC71;
+  }
+   .options .slider-option:nth-child(5) {
+    --defaultBackground:#5D9CEC;
+  }
+   .options .slider-option:nth-child(6) {
+    --defaultBackground:#AC92EC;
+  }
+   .options .slider-option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 900px;
+    min-height: 350px;
+    margin: 0px;
+    border-radius: 40px;
+    background-size: auto 100%;
+    /*&:active {
+       transform:scale(0.9);
+    }*/
+  }
+   .options .slider-option.active .shadow {
+    box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+  }
+   .options .slider-option.active .label {
+    bottom: 20px;
+    left: 20px;
+  }
+   .options .slider-option.active .label .info > div {
+    left: 0px;
+    opacity: 1;
+  }
+   .options .slider-option:not(.active) {
+    flex-grow: 1;
+    border-radius: 50px;
+  }
+   .options .slider-option:not(.active) .shadow {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+  }
+   .options .slider-option:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+  }
+   .options .slider-option:not(.active) .label .info > div {
+    left: 20px;
+    opacity: 0;
+  }
+   .options .slider-option .shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 120px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  }
+   .options .slider-option .label {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  }
+   .options .slider-option .label .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    color: var(--defaultBackground);
+  }
+   .options .slider-option .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: white;
+    white-space: pre;
+  }
+   .options .slider-option .label .info > div {
+    position: relative;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+  }
+   .options .slider-option .label .info .main {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+   .options .slider-option .label .info .sub {
+    transition-delay: 0.1s;
+  }
+  
+  .slider-first{
+    background: url(/static/images/renderFull.png) !important;
+    background-size: auto 120% !important;
+    background-position: center !important;
+  }
+  
+  .slider-second{
+    background: url(/static/images/renderFull2.png) !important;
+    background-size: auto 120% !important;
+    background-position: center !important;
+  }
+  
+  .slider-third{
+    background: url(/static/images/renderFull3.png) !important;
+    background-size: auto 120% !important;
+    background-position: center !important;
+  }
+  
+  .slider-fourth{
+    background: url(/static/images/renderFull4.png) !important;
+    background-size: auto 120% !important;
+    background-position: center !important;
+  }
+}
+
+.site-col:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 100%;
+  @apply outline-2 outline-dashed outline-white/25 dark:outline-black/25 z-50;
+}
+
+.main-slider{
+  @apply font-Outfit font-normal text-lg text-white;
+}
+.sub-slider{
+  @apply font-Outfit font-light text-base text-[#d1d1d1] -mt-2;
+}
+
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.active-vert{
+  @apply h-[400px];
+}
+
+/*.credit {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -209,11 +552,11 @@ a {
   align-items: stretch;
   overflow: hidden;
   min-width: 600px;
-  max-width: 1000px;
+  max-width: 844px;
   width: calc(100% - 100px);
   height: 450px;
 }
-@media screen and (max-width: 718px) {
+ @media screen and (max-width: 718px) {
    .options {
     min-width: 520px;
   }
@@ -284,9 +627,9 @@ a {
   margin: 0px;
   border-radius: 40px;
   background-size: auto 100%;
-  /*&:active {
+  &:active {
      transform:scale(0.9);
-  }*/
+  }
 }
  .options .slider-option.active .shadow {
   box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
@@ -401,10 +744,4 @@ a {
 }
 .sub-slider{
   @apply font-Outfit font-light text-base text-[#d1d1d1] -mt-2;
-}
-
-body {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
+}*/

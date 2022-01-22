@@ -2,8 +2,6 @@ import Head from 'next/head'
 import { Fragment, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
-import {gsap, Power3} from 'gsap';
-import anime from 'animejs'; 
 
 
 export default function Home() {
@@ -63,15 +61,35 @@ export default function Home() {
 
     window.addEventListener("scroll", handleWidth);
 
-    window.onclick = e => {
-      if(e.target.classList.contains("slider-option")){
-       document.querySelectorAll(".slider-option").forEach(entry =>{
-        entry.classList.remove("active");
-       })
-       
-       e.target.classList.add("active");
+    window.addEventListener("click", function(){
+      window.onclick = e => {
+        if(e.target.classList.contains("slider-option")){
+         document.querySelectorAll(".slider-option").forEach(entry =>{
+          entry.classList.remove("active");
+         })
+         
+         e.target.classList.add("active");
+        }
       }
-  } 
+    });
+
+    document.addEventListener("click", function(event){
+      var targetElement = event.target;
+      if(targetElement.closest(".slider-option") != null)
+      {
+        var sliderTarget = targetElement.closest(".slider-option");
+      }
+      if(sliderTarget != null){
+      if(sliderTarget.classList.contains("slider-option")){
+        document.querySelectorAll(".slider-option").forEach(entry =>{
+         entry.classList.remove("active");
+        })
+        
+        sliderTarget.classList.add("active");
+       }}
+  });
+
+    
   
     const multipleTargets = document.querySelectorAll('.tl-animate');
     const focusTargets = document.querySelectorAll('.focus-target');
@@ -216,9 +234,7 @@ export default function Home() {
       </Head>
 
       <div className="fixed inset-0 flex flex-col justify-center items-center z-[200] w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
-      <svg height="100%" width="100%" strokeWidth="2" className="stroke-black dark:stroke-white text-line block">
-        <text className="font-BlenderPro font-bold text-[12rem]" x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="none" fontSize = "2000">BrokeTopia</text>
-      </svg>
+      <h1 className="animate-fadeIn font-Outfit font-bold text-[3rem] lg:text-[12rem]">BrokeTopia</h1>
       </div>
 
       <Navigation/>
