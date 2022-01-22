@@ -245,6 +245,7 @@ a {
 }
  .options .slider-option.active {
   flex-grow: 10000;
+  -webkit-box-flex: 10000;
   transform: scale(1);
   max-width: 900px;
   margin: 0px;
@@ -267,6 +268,7 @@ a {
 }
  .options .slider-option:not(.active) {
   flex-grow: 1;
+  -webkit-box-flex: 1;
   border-radius: 30px;
 }
  .options .slider-option:not(.active) .shadow {
@@ -374,6 +376,7 @@ a {
     min-width: 280px;
     overflow: hidden;
     aspect-ratio: 615 / 903;
+    -webkit-aspect-ratio: 615 / 903;
     min-height: 40px;
     background: #ED5565;
     background-size: auto 120%;
@@ -404,6 +407,7 @@ a {
   }
    .options .slider-option.active {
     flex-grow: 10000;
+    -webkit-box-flex: 10000;
     transform: scale(1);
     max-width: 900px;
     min-height: 350px;
@@ -427,6 +431,7 @@ a {
   }
    .options .slider-option:not(.active) {
     flex-grow: 1;
+    -webkit-box-flex: 1;
     border-radius: 50px;
   }
    .options .slider-option:not(.active) .shadow {
