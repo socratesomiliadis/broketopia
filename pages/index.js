@@ -2,6 +2,30 @@ import Head from 'next/head'
 import { Fragment, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  initial: {
+    y: 30,
+    opacity: 0,
+  },
+  animate:{
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: .3,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const stagger ={
+  animate: {
+    transition: {
+      staggerChildren: 0.05
+    }
+  }
+};
 
 
 export default function Home() {
@@ -25,7 +49,7 @@ export default function Home() {
     const timer = setTimeout(() => {
       prBody.classList.remove("no-overflow");
       prWrapper.classList.add("pr-hide");
-    }, 2000);
+    }, 1200);
 
     var r = document.querySelector(':root');
 
@@ -259,9 +283,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <div className="fixed inset-0 flex flex-col justify-center items-center z-[200] w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
-      <h1 className="animate-fadeIn font-Outfit font-bold text-[3rem] lg:text-[12rem]">BrokeTopia</h1>
-      </div>
+      <motion.div
+        exit={{ opacity: 0 }}
+        initial="initial"
+        animate="animate"
+      className="fixed inset-0 flex flex-col justify-center items-center z-[200] w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out">
+      <motion.div variants={stagger} className="text-black dark:text-white flex flex-row justify-center items-center">
+        <motion.span variants={fadeInUp} className="font-Outfit font-bold text-6xl">b</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-bold text-6xl">r</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-bold text-6xl">o</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-bold text-6xl">k</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-bold text-6xl">e</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-light text-6xl">t</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-light text-6xl">o</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-light text-6xl">p</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-light text-6xl">i</motion.span>
+        <motion.span variants={fadeInUp} className="font-Outfit font-light text-6xl">a</motion.span>
+      </motion.div>
+      </motion.div>
 
       <Navigation/>
       
