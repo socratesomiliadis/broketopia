@@ -147,25 +147,6 @@ video.heroVid{
   scroll-snap-type: y mandatory;
   scroll-snap-points-y: repeat(300px);
 }
-.pageReset{
-    position: fixed !important;
-    bottom: 0;
-    transform: translateY(100vh) scale(1) !important;
-}
-.pageResetStart{
-  position: fixed !important;
-  bottom: 0;
-  transform: translateY(100vh) scale(1) !important;
-}
-.pageResetMid{
-  position: fixed !important;
-  bottom: 0;
-  transform: translateY(80vh) scale(1) !important;
-}
-.pageResetAnim{
-  transform: translateY(8vh) scale(1) !important;
-  transition: transform 0.8s ease-out 0s;
-}
 .timeline-item{
   scroll-snap-align: start;
 }

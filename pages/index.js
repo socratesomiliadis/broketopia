@@ -3,9 +3,6 @@ import { Fragment, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
 import { motion } from 'framer-motion';
-import {gsap} from 'gsap';
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 
 const fadeInUp = {
@@ -44,16 +41,6 @@ export default function Home() {
   let sliderItem = useRef();
 
   useEffect(() => {
-
-    
-    /*gsap.to(".heroVid", {scale: 0.6, scrollTrigger: {
-      trigger: ".heroDiv",
-      start: "top -10%",
-      end: "+=300",
-      markers:true,
-      pin:true,
-      scrub: true
-      }})*/
   
     let prBody = document.querySelector('body');
     let prWrapper = document.querySelector('.pr-wrapper');
@@ -135,9 +122,7 @@ export default function Home() {
     const focusTargets = document.querySelectorAll('.focus-target');
     const footerTarget = document.querySelectorAll('.options');
     const TopTarget = document.querySelectorAll('.pageResetBottom');
-    const ResetTarget = document.querySelectorAll('.pageResetBottom');
 
-    var topVid = document.querySelector(".heroDiv");
 
     const elementHasIntersected = (entries) => {
       entries.forEach(entry=>{
@@ -251,22 +236,17 @@ export default function Home() {
     const scrollTop = (entries) => {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
-          //topVid.classList.add("pageReset");
           prBody.classList.add("no-overflow");
-          const timer3 = setTimeout(() => {
-            topVid.classList.add("pageResetAnim");
-            //entry.target.children[0].children[0].children[0].classList.remove("animVidUp");
-          }, 10);
-          //entry.target.children[0].children[0].children[0].classList.add("animVidUp");
+
+          const timer = setTimeout(() => {
+            scrollToTop();
+          }, 100);
+
           const timer2 = setTimeout(() => {
             prBody.classList.remove("no-overflow");
-            topVid.classList.remove("pageResetStart");
-            //topVid.classList.remove("pageReset");
-            topVid.classList.remove("pageResetAnim");
-            scrollToTop();
-            //entry.target.children[0].children[0].children[0].classList.remove("animVidUp");
-          }, 650);
+          }, 300);
           
+
           let tlTargets = document.querySelectorAll('.tl-animate');
           tlTargets.forEach(entry=>{
             const tlItem=entry;
@@ -298,19 +278,6 @@ export default function Home() {
         }
     })};
 
-    const resetPage = (entries) => {
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          topVid.classList.add("pageResetStart");
-          const timer4 = setTimeout(() => {
-            topVid.classList.add("pageResetMid");
-          }, 10);
-        }else if(entry.boundingClientRect.top > 0 && !entry.isIntersecting){
-          topVid.classList.remove("pageResetStart");
-          topVid.classList.remove("pageResetMid");
-        }
-        
-    })};
 
 
 
@@ -336,13 +303,9 @@ export default function Home() {
 
     const ioConfiguration5 = {
       rootMargin: '0px',
-      threshold: [0.25]
-    };
-
-    const ioConfiguration6 = {
-      rootMargin: '0px',
       threshold: [0]
     };
+
 
     
     
@@ -356,8 +319,6 @@ export default function Home() {
     footerTarget.forEach((target) => footerObserver.observe(target));
     const TopObserver = new IntersectionObserver(scrollTop, ioConfiguration5);
     TopTarget.forEach((target) => TopObserver.observe(target));
-    const ResetObserver = new IntersectionObserver(resetPage, ioConfiguration6);
-    ResetTarget.forEach((target) => ResetObserver.observe(target));
 
     
 
@@ -414,7 +375,7 @@ export default function Home() {
       <div className="relative bg-white dark:bg-black z-10">
       <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
       <div className="heroDiv z-[5000] overflow-hidden gpu relative px-6">
-        <div className="lg:h-[100vh] overflow-hidden mt-8 px-12 w-screen  sticky top-0 gpu">
+        <div className="lg:h-[90vh] overflow-hidden mt-8 px-12 w-screen  sticky top-0 gpu">
           <div className="overflow-hidden w-full rounded-2xl h-full gpu">
             <video className="video-block heroVid relative w-screen gpu" src="/static/videos/HeroVid.mp4" autoPlay muted playsInline loop></video>
           </div>
@@ -554,7 +515,7 @@ export default function Home() {
      
       </main>
 
-      <footer className="relative w-full h-[50vh] z-[10] lg:h-[90vh] flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
+      <footer className="relative w-full h-[50vh] z-[30] lg:h-[90vh] flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Buy</span></a>
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Now</span></a>
         <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
@@ -733,10 +694,10 @@ export default function Home() {
         </div>
         
       </footer>
-      <div className="overflow-hidden relative h-[70vh] w-screen bg-white dark:bg-black">
+      <div className="overflow-hidden relative z-50 h-[30vh] w-screen bg-white dark:bg-black">
 
       </div>
-      <div className="overflow-hidden pageResetBottom relative h-screen w-screen bg-white dark:bg-black">
+      <div className="overflow-hidden pageResetBottom z-50 relative h-[10vh] w-screen bg-white dark:bg-black">
 
       </div>
       
