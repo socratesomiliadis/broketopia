@@ -692,8 +692,10 @@ export default function Home() {
               </div>
             </div>
         </div>
-        
       </footer>
+      <div className="relative z-50 bg-white dark:bg-black h-[10vh] w-screen">
+
+      </div>
       
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
     </Fragment>
