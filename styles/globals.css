@@ -82,8 +82,27 @@ body {
   
 
 }
+body::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	@apply bg-white dark:bg-black
+}
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+	
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	@apply bg-[#cacaca] dark:bg-[#313131]
+}
+
 body{
   overflow-x: hidden;
+  overflow-y: overlay;
 }
 a {
   color: inherit;
@@ -95,7 +114,8 @@ a {
 }
 
 .no-overflow{
-  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
 }
 
 .pr-hide{
@@ -141,7 +161,6 @@ video.heroVid{
   position: fixed !important;
   bottom: 0;
   transform: translateY(80vh) scale(1) !important;
-  transition: transform 0.8s ease-out 0s;
 }
 .pageResetAnim{
   transform: translateY(8vh) scale(1) !important;
