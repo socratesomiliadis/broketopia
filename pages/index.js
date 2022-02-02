@@ -253,7 +253,7 @@ export default function Home() {
             prBody.classList.remove("no-overflow");
             scrollToTop();
             entry.target.children[0].children[0].children[0].classList.remove("animVidUp");
-          }, 1200);
+          }, 650);
           
           let tlTargets = document.querySelectorAll('.tl-animate');
           tlTargets.forEach(entry=>{
@@ -310,7 +310,7 @@ export default function Home() {
 
     const ioConfiguration5 = {
       rootMargin: '0px',
-      threshold: [0.95]
+      threshold: [0.97]
     };
 
     
@@ -701,7 +701,7 @@ export default function Home() {
         
       </footer>
       <div className="mt-32 overflow-hidden inf-target relative z-20 gpu px-12">
-        <div className="lg:h-[100vh] mt-8 pr-28 w-screen sticky top-0 gpu">
+        <div className="lg:h-[100vh] mt-8 pr-[110px] w-screen sticky top-0 gpu">
           <div className="w-full h-full  gpu">
             <video className=" rounded-2xl bottom-vid w-screen gpu" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video>
           </div>
