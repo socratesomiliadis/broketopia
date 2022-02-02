@@ -121,7 +121,7 @@ export default function Home() {
     const multipleTargets = document.querySelectorAll('.tl-animate');
     const focusTargets = document.querySelectorAll('.focus-target');
     const footerTarget = document.querySelectorAll('.options');
-    const TopTarget = document.querySelectorAll('.pageResetBottom');
+    //const TopTarget = document.querySelectorAll('.pageResetBottom');
 
 
     const elementHasIntersected = (entries) => {
@@ -317,8 +317,8 @@ export default function Home() {
     focusTargets.forEach((target) => focusObbserver.observe(target));
     const footerObserver = new IntersectionObserver(footerVis, ioConfiguration4);
     footerTarget.forEach((target) => footerObserver.observe(target));
-    const TopObserver = new IntersectionObserver(scrollTop, ioConfiguration5);
-    TopTarget.forEach((target) => TopObserver.observe(target));
+    //const TopObserver = new IntersectionObserver(scrollTop, ioConfiguration5);
+    //TopTarget.forEach((target) => TopObserver.observe(target));
 
     
 
@@ -694,12 +694,6 @@ export default function Home() {
         </div>
         
       </footer>
-      <div className="overflow-hidden relative z-50 h-[30vh] w-screen bg-white dark:bg-black">
-
-      </div>
-      <div className="overflow-hidden pageResetBottom z-50 relative h-[10vh] w-screen bg-white dark:bg-black">
-
-      </div>
       
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
     </Fragment>
