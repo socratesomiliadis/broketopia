@@ -3,6 +3,10 @@ import { Fragment, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
 import { motion } from 'framer-motion';
+import {gsap} from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const fadeInUp = {
   initial: {
@@ -28,6 +32,7 @@ const stagger ={
 };
 
 
+
 export default function Home() {
 
   
@@ -40,6 +45,16 @@ export default function Home() {
 
   useEffect(() => {
 
+    
+    /*gsap.to(".heroVid", {scale: 0.6, scrollTrigger: {
+      trigger: ".heroDiv",
+      start: "top -10%",
+      end: "+=300",
+      markers:true,
+      pin:true,
+      scrub: true
+      }})*/
+  
     let prBody = document.querySelector('body');
     let prWrapper = document.querySelector('.pr-wrapper');
 
@@ -52,6 +67,7 @@ export default function Home() {
     }, 1200);
 
     var r = document.querySelector(':root');
+    var h = document.getElementById('heroVid');
 
     const handleScroll = () => {
       setScrollY(Math.round(window.scrollY));
@@ -61,15 +77,15 @@ export default function Home() {
       setHeight(window.innerHeight);
     };
 
-
-
     const handleWidth = () => {
-      var translateWidth = 1 - (window.scrollY * 0.001)
+      
+      var scrolled = 1 - (window.scrollY /  window.innerHeight )
     
-      r.style.setProperty('--heroVidScale', `${translateWidth > 0.6
-      ? 1 - (window.scrollY * 0.001)
-    : 0.6}`);
-      setWidth(`w-[${100 - (window.scrollY * 0.1)}vw]`);
+      r.style.setProperty('--heroVidWidth', `${scrolled > 0.6
+      ? scrolled
+      : 0.6}`);
+      //h.style.setProperty('border-radius', `${16 + scrolled}px`);
+      //setWidth(`w-[${100 - (window.scrollY * 0.1)}vw]`);
     };
 
     setTestHeight(document.querySelector('body').offsetHeight);    
@@ -118,6 +134,7 @@ export default function Home() {
     const multipleTargets = document.querySelectorAll('.tl-animate');
     const focusTargets = document.querySelectorAll('.focus-target');
     const footerTarget = document.querySelectorAll('.options');
+    const TopTarget = document.querySelectorAll('.scrollTopSec');
 
     const elementHasIntersected = (entries) => {
       entries.forEach(entry=>{
@@ -221,6 +238,47 @@ export default function Home() {
         }
     })};
 
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0
+      });
+    };
+
+    const scrollTop = (entries) => {
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          scrollToTop();
+          let tlTargets = document.querySelectorAll('.tl-animate');
+          tlTargets.forEach(entry=>{
+            const tlItem=entry;
+            const tlImageBox = undefined;
+            const tlImageText1 = undefined;
+            const tlImageText2 = undefined;
+            const tlDesc = undefined;
+            if(entry.closest(".timeline-item").children[0].children[0] != undefined && !(entry.closest(".timeline-item").children[0].innerHTML.includes("<p>"))) {
+              tlImageBox = entry.closest(".timeline-item").children[0].children[0].children[0];
+              tlImageText1 = entry.closest(".timeline-item").children[0].children[0].children[1].children[0];
+              tlImageText2 = entry.closest(".timeline-item").children[0].children[0].children[1].children[1];
+              tlDesc = entry.closest(".timeline-item").children[2];
+            }
+            else{
+              tlImageBox = entry.closest(".timeline-item").children[2].children[0].children[0];
+              tlImageText1 = entry.closest(".timeline-item").children[2].children[0].children[1].children[0];
+              tlImageText2 = entry.closest(".timeline-item").children[2].children[0].children[1].children[1];
+              tlDesc = entry.closest(".timeline-item").children[0];
+            }
+
+
+            tlItem.classList.remove("focus");
+            tlImageBox.classList.remove("box-animate");
+            tlImageText1.classList.remove("text-drop");
+            tlImageText2.classList.remove("text-drop");
+            tlDesc.classList.remove("opacity-visible");
+
+          })
+        }
+    })};
+
 
 
     const ioConfiguration = {
@@ -243,6 +301,11 @@ export default function Home() {
       threshold: [0]
     };
 
+    const ioConfiguration5 = {
+      rootMargin: '0px',
+      threshold: [0.9]
+    };
+
     
     
     const observer = new IntersectionObserver(elementHasIntersected, ioConfiguration);
@@ -253,6 +316,8 @@ export default function Home() {
     focusTargets.forEach((target) => focusObbserver.observe(target));
     const footerObserver = new IntersectionObserver(footerVis, ioConfiguration4);
     footerTarget.forEach((target) => footerObserver.observe(target));
+    const TopObserver = new IntersectionObserver(scrollTop, ioConfiguration5);
+    TopTarget.forEach((target) => TopObserver.observe(target));
 
     
 
@@ -284,6 +349,7 @@ export default function Home() {
       </Head>
 
       <motion.div
+        
         exit={{ opacity: 0 }}
         initial="initial"
         animate="animate"
@@ -307,7 +373,13 @@ export default function Home() {
       <main className="relative z-[10] overflow-x-hidden"> 
       <div className="relative bg-white dark:bg-black z-10">
       <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
-      <div className="relative sm:h-[40vh] md:h-[60vh] lg:h-[90vh]"><div className="  lg:h-[90vh] mt-8 px-12 w-screen heroDiv sticky top-0"><video className="rounded-2xl video-block heroVid relative w-screen" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div>
+      <div className="heroDiv gpu relative px-6">
+        <div className="lg:h-[100vh] mt-8 px-12 w-screen  sticky top-0 gpu">
+          <div className="overflow-hidden w-full rounded-2xl h-full gpu">
+            <video className="video-block heroVid relative w-screen gpu" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video>
+          </div>
+        </div>
+      </div>
       <div className="font-Outfit pt-24 pb-36 font-medium  text-2xl 2xl:w-1/3 w-9/12 md:w-8/12 lg:w-7/12 items-center text-[#bec0c5] dark:text-[#5a5a5a] ">
         <p id="test" className="pb-6 focus-target">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         <p className="py-6 focus-target">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -442,64 +514,64 @@ export default function Home() {
      
       </main>
 
-      <footer className="sticky z-0 bottom-0 left-0 w-full h-[50vh] lg:h-screen flex flex-col bg-black dark:bg-white items-center justify-start overflow-hidden">
-        <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Buy</span></a>
-        <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold text-white dark:text-black lg:text-[16em]">Now</span></a>
+      <footer className="sticky z-0 bottom-0 left-0 w-full h-[50vh] lg:h-screen flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
+        <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Buy</span></a>
+        <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Now</span></a>
         <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
         <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%] "></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%] "></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render4.png" width="615" height="903" /></a></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#159</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#159</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
         </div>
@@ -507,57 +579,57 @@ export default function Home() {
           <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render3.png" width="615" height="903" /></a></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#4200</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#4200</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
           </div>
@@ -565,119 +637,63 @@ export default function Home() {
           <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="block relative w-full h-0 pb-[100%] overflow-hidden"><a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/198" target="_blank" rel="noreferrer"><Image className="hover:scale-110 transition-transform duration-150 ease-linear" src="/static/images/render.png" width="615" height="903" /></a></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#198</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#198</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
             <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
               <div className="site-col block relative w-full h-0 pb-[100%]"></div>
               <div className="flex justify-between">
-                <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-                <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">NFT World</span>
+                <span className="font-Outfit font-light text-base dark:text-white text-black">#???</span>
               </div>
             </div>
         </div>
-        <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
-        <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
-            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
-            <div className="flex justify-between">
-              <span className="font-Outfit font-light text-base text-white dark:text-black">NFT World</span>
-              <span className="font-Outfit font-light text-base text-white dark:text-black">#???</span>
-            </div>
-          </div>
-        </div>
+        
       </footer>
+      <div  className="overflow-hidden"><div className="bg-white dark:bg-black rounded-2xl z-[100] relative sm:h-[40vh] md:h-[60vh] lg:h-[90vh]"><div className="mt-64 scrollTopSec lg:h-[80vh] px-12 w-screen sticky top-0"><video className="rounded-2xl w-screen relative" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div></div>
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
     </Fragment>
   )
