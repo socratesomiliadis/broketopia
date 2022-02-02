@@ -304,7 +304,7 @@ export default function Home() {
 
       <Navigation/>
       
-      <main className="relative z-[10]"> 
+      <main className="relative z-[10] overflow-x-hidden"> 
       <div className="relative bg-white dark:bg-black z-10">
       <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
       <div className="relative sm:h-[40vh] md:h-[60vh] lg:h-[90vh]"><div className="  lg:h-[90vh] mt-8 px-12 w-screen heroDiv sticky top-0"><video className="rounded-2xl video-block heroVid relative w-screen" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div>

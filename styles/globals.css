@@ -65,7 +65,9 @@
   stroke-dashoffset: 500;
   animation: dash 1.5s linear forwards;
 }
-
+html{
+  background-color: #000 !important;
+}
 html,
 body {
   padding: 0;
