@@ -134,11 +134,15 @@ export default function Home() {
     const multipleTargets = document.querySelectorAll('.tl-animate');
     const focusTargets = document.querySelectorAll('.focus-target');
     const footerTarget = document.querySelectorAll('.options');
-    const TopTarget = document.querySelectorAll('.inf-target');
+    const TopTarget = document.querySelectorAll('.pageResetBottom');
+    const ResetTarget = document.querySelectorAll('.pageResetBottom');
+
+    var topVid = document.querySelector(".heroDiv");
 
     const elementHasIntersected = (entries) => {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
+            
             const tlItem=entry.target;
             const tlImageBox = undefined;
             const tlImageText1 = undefined;
@@ -247,12 +251,20 @@ export default function Home() {
     const scrollTop = (entries) => {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
+          //topVid.classList.add("pageReset");
           prBody.classList.add("no-overflow");
-          entry.target.children[0].children[0].children[0].classList.add("animVidUp");
+          const timer3 = setTimeout(() => {
+            topVid.classList.add("pageResetAnim");
+            //entry.target.children[0].children[0].children[0].classList.remove("animVidUp");
+          }, 10);
+          //entry.target.children[0].children[0].children[0].classList.add("animVidUp");
           const timer2 = setTimeout(() => {
             prBody.classList.remove("no-overflow");
+            topVid.classList.remove("pageResetStart");
+            //topVid.classList.remove("pageReset");
+            topVid.classList.remove("pageResetAnim");
             scrollToTop();
-            entry.target.children[0].children[0].children[0].classList.remove("animVidUp");
+            //entry.target.children[0].children[0].children[0].classList.remove("animVidUp");
           }, 650);
           
           let tlTargets = document.querySelectorAll('.tl-animate');
@@ -286,6 +298,20 @@ export default function Home() {
         }
     })};
 
+    const resetPage = (entries) => {
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          topVid.classList.add("pageResetStart");
+          const timer4 = setTimeout(() => {
+            topVid.classList.add("pageResetMid");
+          }, 10);
+        }else if(entry.boundingClientRect.top > 0 && !entry.isIntersecting){
+          topVid.classList.remove("pageResetStart");
+          topVid.classList.remove("pageResetMid");
+        }
+        
+    })};
+
 
 
     const ioConfiguration = {
@@ -310,7 +336,12 @@ export default function Home() {
 
     const ioConfiguration5 = {
       rootMargin: '0px',
-      threshold: [0.97]
+      threshold: [0.25]
+    };
+
+    const ioConfiguration6 = {
+      rootMargin: '0px',
+      threshold: [0]
     };
 
     
@@ -325,6 +356,8 @@ export default function Home() {
     footerTarget.forEach((target) => footerObserver.observe(target));
     const TopObserver = new IntersectionObserver(scrollTop, ioConfiguration5);
     TopTarget.forEach((target) => TopObserver.observe(target));
+    const ResetObserver = new IntersectionObserver(resetPage, ioConfiguration6);
+    ResetTarget.forEach((target) => ResetObserver.observe(target));
 
     
 
@@ -380,10 +413,10 @@ export default function Home() {
       <main className="relative z-[10] overflow-x-hidden"> 
       <div className="relative bg-white dark:bg-black z-10">
       <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
-      <div className="heroDiv gpu relative px-6">
-        <div className="lg:h-[100vh] mt-8 px-12 w-screen  sticky top-0 gpu">
+      <div className="heroDiv z-[5000] overflow-hidden gpu relative px-6">
+        <div className="lg:h-[100vh] overflow-hidden mt-8 px-12 w-screen  sticky top-0 gpu">
           <div className="overflow-hidden w-full rounded-2xl h-full gpu">
-            <video className="video-block heroVid relative w-screen gpu" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video>
+            <video className="video-block heroVid relative w-screen gpu" src="/static/videos/HeroVid.mp4" autoPlay muted playsInline loop></video>
           </div>
         </div>
       </div>
@@ -396,7 +429,7 @@ export default function Home() {
       </section> 
       </div>
       <div id="tl-wrapper" className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-start lg:items-center pl-4 lg:pl-0 bg-white dark:bg-black">
-      <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1] "><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
+      <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1]"><div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div></div>
         <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
             <div className="order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center">
               <div className="tl-image-wrapper">
@@ -521,7 +554,7 @@ export default function Home() {
      
       </main>
 
-      <footer className="relative w-full h-[50vh] z-10 lg:h-screen flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
+      <footer className="relative w-full h-[50vh] z-[10] lg:h-[90vh] flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Buy</span></a>
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Now</span></a>
         <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
@@ -700,13 +733,13 @@ export default function Home() {
         </div>
         
       </footer>
-      <div className="mt-32 overflow-hidden inf-target relative z-20 gpu px-12">
-        <div className="lg:h-[100vh] mt-8 pr-[110px] w-screen sticky top-0 gpu">
-          <div className="w-full h-full  gpu">
-            <video className=" rounded-2xl bottom-vid w-screen gpu" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video>
-          </div>
-        </div>
+      <div className="overflow-hidden relative h-[70vh] w-screen bg-white dark:bg-black">
+
       </div>
+      <div className="overflow-hidden pageResetBottom relative h-screen w-screen bg-white dark:bg-black">
+
+      </div>
+      
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
     </Fragment>
   )
