@@ -104,9 +104,12 @@ a {
   @apply border-black dark:border-white !important;
 }
 
+video.heroVid{
+  height: 100% !important;
+}
+
 .heroVid{
   -webkit-transform: translateZ(0);
-  
   object-fit: cover;
 }
 .gpu{
@@ -117,7 +120,6 @@ a {
   -webkit-transform: translateZ(0);
   transform: scale(var(--heroVidWidth)) !important;
 }
-
 .timeline-wrapper{
   scroll-snap-type: y mandatory;
   scroll-snap-points-y: repeat(300px);
@@ -130,7 +132,13 @@ a {
 .scrollTop{
   transform: translate3d(0, -16rem, 0);
 }
-
+.bottom-vid{
+  transform: translateY(30vh);
+}
+.animVidUp{
+  transform: translateY(9vh) !important;
+  transition: transform 1s ease-out 0s;
+}
 .Image{
   padding: 32px !important;
   position: none !important;

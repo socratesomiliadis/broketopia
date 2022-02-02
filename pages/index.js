@@ -134,7 +134,7 @@ export default function Home() {
     const multipleTargets = document.querySelectorAll('.tl-animate');
     const focusTargets = document.querySelectorAll('.focus-target');
     const footerTarget = document.querySelectorAll('.options');
-    const TopTarget = document.querySelectorAll('.scrollTopSec');
+    const TopTarget = document.querySelectorAll('.inf-target');
 
     const elementHasIntersected = (entries) => {
       entries.forEach(entry=>{
@@ -247,7 +247,14 @@ export default function Home() {
     const scrollTop = (entries) => {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
-          scrollToTop();
+          prBody.classList.add("no-overflow");
+          entry.target.children[0].children[0].children[0].classList.add("animVidUp");
+          const timer2 = setTimeout(() => {
+            prBody.classList.remove("no-overflow");
+            scrollToTop();
+            entry.target.children[0].children[0].children[0].classList.remove("animVidUp");
+          }, 1200);
+          
           let tlTargets = document.querySelectorAll('.tl-animate');
           tlTargets.forEach(entry=>{
             const tlItem=entry;
@@ -303,7 +310,7 @@ export default function Home() {
 
     const ioConfiguration5 = {
       rootMargin: '0px',
-      threshold: [0.9]
+      threshold: [0.95]
     };
 
     
@@ -514,7 +521,7 @@ export default function Home() {
      
       </main>
 
-      <footer className="sticky z-0 bottom-0 left-0 w-full h-[50vh] lg:h-screen flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
+      <footer className="relative w-full h-[50vh] z-10 lg:h-screen flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Buy</span></a>
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Now</span></a>
         <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
@@ -693,7 +700,13 @@ export default function Home() {
         </div>
         
       </footer>
-      <div  className="overflow-hidden"><div className="bg-white dark:bg-black rounded-2xl z-[100] relative sm:h-[40vh] md:h-[60vh] lg:h-[90vh]"><div className="mt-64 scrollTopSec lg:h-[80vh] px-12 w-screen sticky top-0"><video className="rounded-2xl w-screen relative" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video></div></div></div>
+      <div className="mt-32 overflow-hidden inf-target relative z-20 gpu px-12">
+        <div className="lg:h-[100vh] mt-8 pr-28 w-screen sticky top-0 gpu">
+          <div className="w-full h-full  gpu">
+            <video className=" rounded-2xl bottom-vid w-screen gpu" autoPlay muted playsInline loop><source src="/static/videos/HeroVid.mp4" type="video/mp4" /></video>
+          </div>
+        </div>
+      </div>
       <audio id='nobSound' src='/static/music/nob.mp3'></audio>
     </Fragment>
   )
