@@ -515,7 +515,7 @@ export default function Home() {
      
       </main>
 
-      <footer className="z-[60] relative w-full h-[50vh] lg:h-fit flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
+      <footer className="z-[30] relative w-full h-[50vh] lg:h-fit flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w1 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Buy</span></a>
         <a href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159" target="_blank" rel="noreferrer"><span className="opacity-0 animate-w2 text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">Now</span></a>
         <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
