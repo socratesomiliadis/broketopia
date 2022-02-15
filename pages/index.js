@@ -465,7 +465,7 @@ export default function Home() {
                 <div className='overflow-hidden w-full rounded-2xl h-full gpu'>
                   <video
                     className='video-block heroVid relative w-screen gpu'
-                    src='/static/videos/TrailerSource.mp4'
+                    src='/static/videos/TrailerSourceFixed.mp4'
                     autoPlay
                     muted
                     playsInline
