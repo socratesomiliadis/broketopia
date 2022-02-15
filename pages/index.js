@@ -476,26 +476,26 @@ export default function Home() {
             </div>
             <div className='font-Outfit pt-24 pb-36 font-medium  text-2xl 2xl:w-1/3 w-9/12 md:w-8/12 lg:w-7/12 items-center text-[#bec0c5] dark:text-[#5a5a5a] '>
               <p id='test' className='pb-6 focus-target'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                BrokeTopia is a massive open-world of a modern multicultural
+                metropolis that sets new standars in terms of visuals,
+                complexity and depth.
               </p>
               <p className='py-6 focus-target'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                The building includes an action-adventure story set in a
+                BrokeBoyz NFT related futuristic world. A megalopolis obsessed
+                with power and glamour. The map is an innovative representation
+                of a metropolis of the 21st century.
               </p>
               <p className='py-6 focus-target'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                A wide variety of in-game quests is waiting for you. Test your
+                skills in this Minecraft metaverse and earn rewards. Hint: The
+                more energy devoted, the bigger the amount of rewards.
               </p>
               <p className='py-6 focus-target'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+                Luck can always change lives, so this one is for you. Challenge
+                the odds in Deez Casino and have a chance to win big prizes.
+                Will the roulette pay the 35:1? Will the slots give you the
+                jackpot? Are you better than our blackjack dealers?
               </p>
             </div>
           </section>
@@ -528,8 +528,8 @@ export default function Home() {
               </div>
             </div>
             <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
-                Proxy Giorgakis
+              <span className='lg:block z-10 text-base lg:text-xl text-center pt-[0.4rem] w-[46px] h-[46px] tl-animate border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+                1
               </span>
             </div>
             <div className='order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
@@ -555,8 +555,8 @@ export default function Home() {
               </div>
             </div>
             <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
-                Proxy Giorgakis
+              <span className='lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+                2
               </span>
             </div>
             <div className='order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center'>
@@ -600,8 +600,8 @@ export default function Home() {
               </div>
             </div>
             <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
-                Proxy Giorgakis
+              <span className='lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+                3
               </span>
             </div>
             <div className='order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
@@ -627,8 +627,8 @@ export default function Home() {
               </div>
             </div>
             <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl tl-animate py-2 px-4 lg:py-4 lg:px-6 border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
-                Proxy Giorgakis
+              <span className='lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+                4
               </span>
             </div>
             <div className='order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center'>
