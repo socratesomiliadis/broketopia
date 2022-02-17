@@ -483,11 +483,13 @@ export default function Home() {
           <section className='heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20'>
             <div>
               <div className='vidCont overflow-hidden w-screen p-8 xl:p-12'>
+                <button></button>
                 <video
                   className='relative w-full gpu rounded-2xl'
                   src='/static/videos/TrailerSourceFixed.mp4'
                   autoPlay
                   muted
+                  controls
                   playsInline
                   loop
                 ></video>
