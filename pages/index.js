@@ -3,6 +3,9 @@ import { Fragment, useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Navigation from "../components/Navigation";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const fadeInUp = {
   initial: {
@@ -35,6 +38,24 @@ export default function Home() {
   let sliderItem = useRef();
 
   useEffect(() => {
+    ScrollTrigger.matchMedia({
+      "(min-width: 800px)": function () {
+        gsap.to(".vidCont", {
+          scrollTrigger: {
+            trigger: ".vidCont",
+            start: "center 48%",
+            end: "bottom center",
+            pin: ".vidCont",
+            pinSpacing: true,
+            scrub: 1,
+          },
+          scale: 0.7,
+          ease: "none",
+          duration: 10,
+        });
+      },
+    });
+
     let prBody = document.querySelector("body");
     let prWrapper = document.querySelector(".pr-wrapper");
 
@@ -460,25 +481,23 @@ export default function Home() {
       <main className='relative z-[10] overflow-x-hidden'>
         <div className='relative bg-white dark:bg-black z-10'>
           <section className='heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20'>
-            <div className='heroDiv z-[5000] overflow-hidden gpu relative px-6'>
-              <div className='lg:h-[90vh] overflow-hidden mt-8 px-12 w-screen  sticky top-0 gpu'>
-                <div className='overflow-hidden w-full rounded-2xl h-full gpu'>
-                  <video
-                    className='video-block heroVid relative w-screen gpu'
-                    src='/static/videos/TrailerSourceFixed.mp4'
-                    autoPlay
-                    muted
-                    playsInline
-                    loop
-                  ></video>
-                </div>
+            <div>
+              <div className='vidCont overflow-hidden w-screen p-8 xl:p-12'>
+                <video
+                  className='relative w-full gpu rounded-2xl'
+                  src='/static/videos/TrailerSourceFixed.mp4'
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                ></video>
               </div>
             </div>
             <div className='font-Outfit pt-24 pb-36 font-medium  text-2xl 2xl:w-1/3 w-9/12 md:w-8/12 lg:w-7/12 items-center text-[#bec0c5] dark:text-[#5a5a5a] '>
               <p id='test' className='pb-6 focus-target'>
                 BrokeTopia is a massive open-world of a modern multicultural
-                metropolis that sets new standars in terms of visuals,
-                complexity and depth.
+                metropolis that sets new standards in terms of visuals,
+                complexity, and depth.
               </p>
               <p className='py-6 focus-target'>
                 The building includes an action-adventure story set in a

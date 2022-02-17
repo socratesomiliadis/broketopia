@@ -240,9 +240,9 @@ video.heroVid {
   flex-direction: row;
   align-items: stretch;
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 1300px;
   width: calc(100% - 100px);
-  height: 450px;
+  height: 580px;
 }
 .options .slider-option {
   position: relative;
