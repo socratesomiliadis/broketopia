@@ -490,6 +490,7 @@ export default function Home() {
                   autoPlay
                   muted
                   controls
+                  controlsList='nodownload noremoteplayback noplaybackrate'
                   playsInline
                   loop
                 ></video>
