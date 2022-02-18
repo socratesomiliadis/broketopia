@@ -536,10 +536,10 @@ export default function Home() {
                 <div className='tl-image-box'></div>
                 <div className='tl-image-cont rounded-2xl overflow-hidden'>
                   <h2 className='animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
-                    Plateia
+                    BrokeTopia
                   </h2>
                   <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
-                    Downtown City
+                    The NFT City
                   </h2>
                   <Image
                     className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
@@ -557,8 +557,9 @@ export default function Home() {
             </div>
             <div className='order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
               <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
-                Complete your quests by going to the quest market in the market
-                of the quest and complete any quests using the quest ability.
+                Start new in-game quests and test the limits of your abilities.
+                A huge variety of challenges are waiting for you to take them
+                on. Can you complete them all?
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl'>
                 <p>Found in: Plateia</p>
@@ -569,8 +570,9 @@ export default function Home() {
           <div className='pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full'>
             <div className='order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
               <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
-                Complete your quests by going to the quest market in the market
-                of the quest and complete any quests using the quest ability.
+                Slot, roulette and blackjack games are available 24/7 at Deez
+                Casino. Smart players will be rewarded, the greedy ones will be
+                left penyless.
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4'>
                 <p>Found in: Plateia</p>
@@ -586,11 +588,11 @@ export default function Home() {
               <div className='tl-image-wrapper'>
                 <div className='tl-image-box'></div>
                 <div className='tl-image-cont rounded-2xl overflow-hidden'>
-                  <h2 className='animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
-                    Plateia
+                  <h2 className='animEasing absolute h-[1%] w-[80%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
+                    Deez Casino
                   </h2>
                   <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
-                    Downtown City
+                    A Metaverse Casino
                   </h2>
                   <Image
                     className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
@@ -607,11 +609,11 @@ export default function Home() {
               <div className='tl-image-wrapper'>
                 <div className='tl-image-box'></div>
                 <div className='tl-image-cont rounded-2xl overflow-hidden'>
-                  <h2 className='animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
-                    Plateia
+                  <h2 className='animEasing absolute h-[1%] w-[80%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
+                    Central Square
                   </h2>
                   <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
-                    Downtown City
+                    The Questing Zone
                   </h2>
                   <Image
                     className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
@@ -629,8 +631,8 @@ export default function Home() {
             </div>
             <div className='order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
               <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
-                Complete your quests by going to the quest market in the market
-                of the quest and complete any quests using the quest ability.
+                Visit the Central Square and find Roosevelt, the BrokeTopia
+                mastermind, and see what quests he has in store for you.
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl'>
                 <p>Found in: Plateia</p>
@@ -641,8 +643,10 @@ export default function Home() {
           <div className='pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full'>
             <div className='order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
               <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
-                Complete your quests by going to the quest market in the market
-                of the quest and complete any quests using the quest ability.
+                The BrokeTopia downtown is the crowning jewels of the
+                metropolis. You can wander around the majestic and imposing
+                buildings, and at the same time comple your quests. This is
+                surely a place you&apos;ll frequent.
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4'>
                 <p>Found in: Plateia</p>
@@ -658,11 +662,11 @@ export default function Home() {
               <div className='tl-image-wrapper'>
                 <div className='tl-image-box'></div>
                 <div className='tl-image-cont rounded-2xl overflow-hidden'>
-                  <h2 className='animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
-                    Plateia
+                  <h2 className='animEasing absolute h-[1%] w-[85%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
+                    Downtown City
                   </h2>
                   <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
-                    Downtown City
+                    The Metropolis Gem
                   </h2>
                   <Image
                     className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
