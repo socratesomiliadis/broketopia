@@ -490,6 +490,7 @@ export default function Home() {
                   autoPlay
                   muted
                   controls
+                  disablePictureInPicture
                   controlsList='nodownload noremoteplayback noplaybackrate'
                   playsInline
                   loop
