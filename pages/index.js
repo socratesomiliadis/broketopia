@@ -562,8 +562,8 @@ export default function Home() {
                 on. Can you complete them all?
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl'>
-                <p>Found in: Plateia</p>
-                <p>Quests: Market, NFT, Check, Broke</p>
+                <p>Found in: BrokeTopia</p>
+                <p>Quests: Start by talking to B-Block</p>
               </div>
             </div>
           </div>
@@ -575,8 +575,8 @@ export default function Home() {
                 left penyless.
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4'>
-                <p>Found in: Plateia</p>
-                <p>Quests: Market, NFT, Check, Broke</p>
+                <p>Found in: East Side</p>
+                <p>Quests: Explore The City, Metro Station</p>
               </div>
             </div>
             <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
@@ -635,8 +635,8 @@ export default function Home() {
                 mastermind, and see what quests he has in store for you.
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl'>
-                <p>Found in: Plateia</p>
-                <p>Quests: Market, NFT, Check, Broke</p>
+                <p>Found in: North Side</p>
+                <p>Quests: Casino, Play Roulette, Slots and Blackjack</p>
               </div>
             </div>
           </div>
@@ -649,8 +649,11 @@ export default function Home() {
                 surely a place you&apos;ll frequent.
               </p>
               <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4'>
-                <p>Found in: Plateia</p>
-                <p>Quests: Market, NFT, Check, Broke</p>
+                <p>Found in: West Side</p>
+                <p>
+                  Quests: Mechanic, The Certificate, First Day At Work, Candy
+                  Delivery
+                </p>
               </div>
             </div>
             <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
