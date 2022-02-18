@@ -526,25 +526,25 @@ video.heroVid {
   }
 
   .slider-first {
-    background: url(/static/images/renderFull.png) !important;
+    background: url(/static/images/Slider1.png) !important;
     background-size: auto 120% !important;
     background-position: center !important;
   }
 
   .slider-second {
-    background: url(/static/images/renderFull2.png) !important;
+    background: url(/static/images/Slider2.png) !important;
     background-size: auto 120% !important;
     background-position: center !important;
   }
 
   .slider-third {
-    background: url(/static/images/renderFull3.png) !important;
+    background: url(/static/images/Slider3.png) !important;
     background-size: auto 120% !important;
     background-position: center !important;
   }
 
   .slider-fourth {
-    background: url(/static/images/renderFull4.png) !important;
+    background: url(/static/images/Slider4.png) !important;
     background-size: auto 120% !important;
     background-position: center !important;
   }
