@@ -399,77 +399,77 @@ export default function Home() {
     <Fragment>
       <Head>
         <title>BrokeTopia | NFT Minecraft World</title>
-        <meta name='description' content='NFT Games' />
-        <link rel='icon' href='/favicon.png' />
+        <meta name="description" content="NFT Games" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <motion.div
         exit={{ opacity: 0 }}
-        initial='initial'
-        animate='animate'
-        className='fixed inset-0 flex flex-col justify-center items-center z-[200] w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out'
+        initial="initial"
+        animate="animate"
+        className="fixed inset-0 flex flex-col justify-center items-center z-[200] w-screen h-screen bg-white dark:bg-black pr-wrapper transition-transform duration-500 ease-out"
       >
         <motion.div
           variants={stagger}
-          className='text-black dark:text-white flex flex-row justify-center items-center'
+          className="text-black dark:text-white flex flex-row justify-center items-center"
         >
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-bold text-6xl'
+            className="font-Outfit font-bold text-6xl"
           >
             b
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-bold text-6xl'
+            className="font-Outfit font-bold text-6xl"
           >
             r
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-bold text-6xl'
+            className="font-Outfit font-bold text-6xl"
           >
             o
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-bold text-6xl'
+            className="font-Outfit font-bold text-6xl"
           >
             k
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-bold text-6xl'
+            className="font-Outfit font-bold text-6xl"
           >
             e
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-light text-6xl'
+            className="font-Outfit font-light text-6xl"
           >
             t
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-light text-6xl'
+            className="font-Outfit font-light text-6xl"
           >
             o
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-light text-6xl'
+            className="font-Outfit font-light text-6xl"
           >
             p
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-light text-6xl'
+            className="font-Outfit font-light text-6xl"
           >
             i
           </motion.span>
           <motion.span
             variants={fadeInUp}
-            className='font-Outfit font-light text-6xl'
+            className="font-Outfit font-light text-6xl"
           >
             a
           </motion.span>
@@ -478,43 +478,43 @@ export default function Home() {
 
       <Navigation />
 
-      <main className='relative z-[10] overflow-x-hidden'>
-        <div className='relative bg-white dark:bg-black z-10'>
-          <section className='heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20'>
+      <main className="relative z-[10] overflow-x-hidden">
+        <div className="relative bg-white dark:bg-black z-10">
+          <section className="heroSec flex flex-col justify-center items-center pt-[100px] bg-white dark:bg-black z-20">
             <div>
-              <div className='vidCont overflow-hidden w-screen p-8 xl:p-12'>
+              <div className="vidCont overflow-hidden w-screen p-8 xl:p-12">
                 <button></button>
                 <video
-                  className='relative w-full gpu rounded-2xl'
-                  src='/static/videos/TrailerSourceFixed.mp4'
+                  className="relative w-full gpu rounded-2xl"
+                  src="/static/videos/TrailerSourceFixed.mp4"
                   autoPlay
                   muted
                   controls
                   disablePictureInPicture
-                  controlsList='nodownload noremoteplayback noplaybackrate'
+                  controlsList="nodownload noremoteplayback noplaybackrate"
                   playsInline
                   loop
                 ></video>
               </div>
             </div>
-            <div className='font-Outfit pt-24 pb-36 font-medium  text-2xl 2xl:w-1/3 w-9/12 md:w-8/12 lg:w-7/12 items-center text-[#bec0c5] dark:text-[#5a5a5a] '>
-              <p id='test' className='pb-6 focus-target'>
+            <div className="font-Outfit pt-24 pb-36 font-medium  text-2xl 2xl:w-1/3 w-9/12 md:w-8/12 lg:w-7/12 items-center text-[#bec0c5] dark:text-[#5a5a5a] ">
+              <p id="test" className="pb-6 focus-target">
                 BrokeTopia is a massive open-world of a modern multicultural
                 metropolis that sets new standards in terms of visuals,
                 complexity, and depth.
               </p>
-              <p className='py-6 focus-target'>
+              <p className="py-6 focus-target">
                 The building includes an action-adventure story set in a
                 BrokeBoyz NFT related futuristic world. A megalopolis obsessed
                 with power and glamour. The map is an innovative representation
                 of a metropolis of the 21st century.
               </p>
-              <p className='py-6 focus-target'>
+              <p className="py-6 focus-target">
                 A wide variety of in-game quests is waiting for you. Test your
                 skills in this Minecraft metaverse and earn rewards. Hint: The
                 more energy devoted, the bigger the amount of rewards.
               </p>
-              <p className='py-6 focus-target'>
+              <p className="py-6 focus-target">
                 Luck can always change lives, so this one is for you. Challenge
                 the odds in Deez Casino and have a chance to win big prizes.
                 Will the roulette pay the 35:1? Will the slots give you the
@@ -524,131 +524,131 @@ export default function Home() {
           </section>
         </div>
         <div
-          id='tl-wrapper'
-          className='timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-start lg:items-center pl-4 lg:pl-0 bg-white dark:bg-black'
+          id="tl-wrapper"
+          className="timeline-wrapper relative overflow-y-hidden h-fit font-Outfit font-normal text-xl flex flex-col items-start lg:items-center pl-4 lg:pl-0 bg-white dark:bg-black"
         >
-          <div className='timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1]'>
-            <div className='z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] '></div>
+          <div className="timeline-progress w-[2px] min-h-full dark:bg-[#3d3d3d] bg-[#cfcfcf] absolute overflow-hidden z-[1]">
+            <div className="z-[2] timeline-progress-bar w-[2px] h-[50vh] dark:bg-[#fff] bg-black fixed bottom-[50vh] "></div>
           </div>
-          <div className='pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full'>
-            <div className='order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center'>
-              <div className='tl-image-wrapper'>
-                <div className='tl-image-box'></div>
-                <div className='tl-image-cont rounded-2xl overflow-hidden'>
-                  <h2 className='animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
+          <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+            <div className="order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center">
+              <div className="tl-image-wrapper">
+                <div className="tl-image-box"></div>
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="animEasing absolute h-[1%] w-[1%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">
                     BrokeTopia
                   </h2>
-                  <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">
                     The NFT City
                   </h2>
                   <Image
-                    className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
-                    src='/static/images/render.png'
-                    width='615'
-                    height='903'
+                    className="tl-image hover:scale-110 transition-transform duration-150 ease-linear"
+                    src="/static/images/render.png"
+                    width="615"
+                    height="903"
                   />
                 </div>
               </div>
             </div>
-            <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl text-center pt-[0.4rem] w-[46px] h-[46px] tl-animate border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+            <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4">
+              <span className="lg:block z-10 text-base lg:text-xl text-center pt-[0.4rem] w-[46px] h-[46px] tl-animate border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">
                 1
               </span>
             </div>
-            <div className='order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
-              <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
+            <div className="order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0">
+              <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">
                 Start new in-game quests and test the limits of your abilities.
                 A huge variety of challenges are waiting for you to take them
                 on. Can you complete them all?
               </p>
-              <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl'>
+              <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl">
                 <p>Found in: BrokeTopia</p>
                 <p>Quests: Start by talking to B-Block</p>
               </div>
             </div>
           </div>
-          <div className='pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full'>
-            <div className='order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
-              <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
+          <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+            <div className="order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0">
+              <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">
                 Slot, roulette and blackjack games are available 24/7 at Deez
                 Casino. Smart players will be rewarded, the greedy ones will be
                 left penyless.
               </p>
-              <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4'>
+              <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4">
                 <p>Found in: East Side</p>
                 <p>Quests: Explore The City, Metro Station</p>
               </div>
             </div>
-            <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+            <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4">
+              <span className="lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">
                 2
               </span>
             </div>
-            <div className='order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center'>
-              <div className='tl-image-wrapper'>
-                <div className='tl-image-box'></div>
-                <div className='tl-image-cont rounded-2xl overflow-hidden'>
-                  <h2 className='animEasing absolute h-[1%] w-[80%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
+            <div className="order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center">
+              <div className="tl-image-wrapper">
+                <div className="tl-image-box"></div>
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="animEasing absolute h-[1%] w-[80%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">
                     Deez Casino
                   </h2>
-                  <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">
                     A Metaverse Casino
                   </h2>
                   <Image
-                    className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
-                    src='/static/images/render2.png'
-                    width='615'
-                    height='903'
+                    className="tl-image hover:scale-110 transition-transform duration-150 ease-linear"
+                    src="/static/images/render2.png"
+                    width="615"
+                    height="903"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className='pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full'>
-            <div className='order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center'>
-              <div className='tl-image-wrapper'>
-                <div className='tl-image-box'></div>
-                <div className='tl-image-cont rounded-2xl overflow-hidden'>
-                  <h2 className='animEasing absolute h-[1%] w-[80%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
+          <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+            <div className="order-2 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 lg:items-end justify-center">
+              <div className="tl-image-wrapper">
+                <div className="tl-image-box"></div>
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="animEasing absolute h-[1%] w-[80%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">
                     Central Square
                   </h2>
-                  <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">
                     The Questing Zone
                   </h2>
                   <Image
-                    className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
-                    src='/static/images/render3.png'
-                    width='615'
-                    height='903'
+                    className="tl-image hover:scale-110 transition-transform duration-150 ease-linear"
+                    src="/static/images/render3.png"
+                    width="615"
+                    height="903"
                   />
                 </div>
               </div>
             </div>
-            <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+            <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4">
+              <span className="lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">
                 3
               </span>
             </div>
-            <div className='order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
-              <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
+            <div className="order-3 tl-right w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0">
+              <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">
                 Visit the Central Square and find Roosevelt, the BrokeTopia
                 mastermind, and see what quests he has in store for you.
               </p>
-              <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl'>
+              <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl">
                 <p>Found in: North Side</p>
                 <p>Quests: Casino, Play Roulette, Slots and Blackjack</p>
               </div>
             </div>
           </div>
-          <div className='pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full'>
-            <div className='order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0'>
-              <p className='w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl'>
+          <div className="pl-4 lg:pl-0 timeline-item flex flex-col lg:flex-row justify-around items-center py-32 w-full">
+            <div className="order-3 lg:order-1 tl-left w-full lg:w-1/2 flex flex-col items-end mt-4 lg:mt-0 gap-8 lg:gap-32 opacity-0">
+              <p className="w-full lg:w-3/4 font-Outfit font-medium text-black dark:text-white text-xl pr-8 lg:pr-0 lg:text-4xl">
                 The BrokeTopia downtown is the crowning jewels of the
                 metropolis. You can wander around the majestic and imposing
                 buildings, and at the same time comple your quests. This is
                 surely a place you&apos;ll frequent.
               </p>
-              <div className='font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4'>
+              <div className="font-Outfit font-light text-black dark:text-white text-base lg:text-xl w-full lg:w-3/4">
                 <p>Found in: West Side</p>
                 <p>
                   Quests: Mechanic, The Certificate, First Day At Work, Candy
@@ -656,365 +656,365 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className='order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4'>
-              <span className='lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black'>
+            <div className="order-1 lg:order-2 tl-center flex items-center justify-start py-8 lg:justify-center lg:py-0 w-full lg:w-1/4">
+              <span className="lg:block z-10 text-base lg:text-xl tl-animate text-center pt-[0.4rem] w-[46px] h-[46px] border-[2.5px] rounded-full border-[#bec0c5] dark:border-[#5a5a5a] text-[#bec0c5] dark:text-[#5a5a5a] bg-white dark:bg-black">
                 4
               </span>
             </div>
-            <div className='order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center'>
-              <div className='tl-image-wrapper'>
-                <div className='tl-image-box'></div>
-                <div className='tl-image-cont rounded-2xl overflow-hidden'>
-                  <h2 className='animEasing absolute h-[1%] w-[85%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white'>
+            <div className="order-2 lg:order-3 tl-right w-full lg:w-1/2 flex flex-col items-start -mt-4 lg:mt-8 justify-center">
+              <div className="tl-image-wrapper">
+                <div className="tl-image-box"></div>
+                <div className="tl-image-cont rounded-2xl overflow-hidden">
+                  <h2 className="animEasing absolute h-[1%] w-[85%] inset-0 z-[4] text-lg lg:text-4xl ml-[4.5%] mt-[3%] font-Outfit font-semibold translate-y-[-200px] text-white">
                     Downtown City
                   </h2>
-                  <h2 className='animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]'>
+                  <h2 className="animEasing absolute h-[1%] w-[70%] inset-0 z-[4] text-base lg:text-3xl ml-[4.5%] mt-[12%] font-Outfit font-light translate-y-[-150px] text-[#c9c9c9]">
                     The Metropolis Gem
                   </h2>
                   <Image
-                    className='tl-image hover:scale-110 transition-transform duration-150 ease-linear'
-                    src='/static/images/render4.png'
-                    width='615'
-                    height='903'
+                    className="tl-image hover:scale-110 transition-transform duration-150 ease-linear"
+                    src="/static/images/render4.png"
+                    width="615"
+                    height="903"
                   />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className='flex items-center justify-center py-96 relative bg-white dark:bg-black z-10'>
-          <div className='options'>
-            <div className='slider-option active slider-first'></div>
-            <div className='slider-option slider-second'></div>
-            <div className='slider-option slider-third'></div>
-            <div className='slider-option slider-fourth'></div>
+        <div className="flex items-center justify-center py-96 relative bg-white dark:bg-black z-10">
+          <div className="options">
+            <div className="slider-option active slider-first"></div>
+            <div className="slider-option slider-second"></div>
+            <div className="slider-option slider-third"></div>
+            <div className="slider-option slider-fourth"></div>
           </div>
         </div>
       </main>
 
-      <footer className='z-[30] relative w-full h-[50vh] lg:h-fit flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden'>
+      <footer className="z-[30] relative w-full h-[50vh] lg:h-fit flex flex-col bg-white dark:bg-black items-center justify-start overflow-hidden">
         <a
-          href='https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159'
-          target='_blank'
-          rel='noreferrer'
+          href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159"
+          target="_blank"
+          rel="noreferrer"
         >
-          <span className='text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]'>
+          <span className="text-[8em] z-[100] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-Outfit font-bold dark:text-white text-black lg:text-[16em]">
             World
           </span>
         </a>
-        <div className='hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8'>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%] '></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+        <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%] "></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%] '></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%] "></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='block relative w-full h-0 pb-[100%] overflow-hidden'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="block relative w-full h-0 pb-[100%] overflow-hidden">
               <a
-                href='https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159'
-                target='_blank'
-                rel='noreferrer'
+                href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/159"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Image
-                  className='hover:scale-110 transition-transform duration-150 ease-linear'
-                  src='/static/images/render4.png'
-                  width='615'
-                  height='903'
+                  className="hover:scale-110 transition-transform duration-150 ease-linear"
+                  src="/static/images/World159.png"
+                  width="700"
+                  height="700"
                 />
               </a>
             </div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #159
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
         </div>
-        <div className='hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8'>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+        <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='block relative w-full h-0 pb-[100%] overflow-hidden'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="block relative w-full h-0 pb-[100%] overflow-hidden">
               <a
-                href='https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200'
-                target='_blank'
-                rel='noreferrer'
+                href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/4200"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Image
-                  className='hover:scale-110 transition-transform duration-150 ease-linear'
-                  src='/static/images/World4200.jpg'
-                  width='700'
-                  height='700'
+                  className="hover:scale-110 transition-transform duration-150 ease-linear"
+                  src="/static/images/World4200.jpg"
+                  width="700"
+                  height="700"
                 />
               </a>
             </div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #4200
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
         </div>
-        <div className='hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8'>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+        <div className="hidden lg:flex flex-row flex-wrap grow-0 shrink basis-auto gap-6 w-screen p-8">
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='block relative w-full h-0 pb-[100%] overflow-hidden'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="block relative w-full h-0 pb-[100%] overflow-hidden">
               <a
-                href='https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/198'
-                target='_blank'
-                rel='noreferrer'
+                href="https://opensea.io/assets/0xbd4455da5929d5639ee098abfaa3241e9ae111af/198"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Image
-                  className='hover:scale-110 transition-transform duration-150 ease-linear'
-                  src='/static/images/World198.jpg'
-                  width='700'
-                  height='700'
+                  className="hover:scale-110 transition-transform duration-150 ease-linear"
+                  src="/static/images/World198.jpg"
+                  width="700"
+                  height="700"
                 />
               </a>
             </div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #198
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
-          <div className='grow shrink-0 basis-0 max-w-full h-full z-50'>
-            <div className='site-col block relative w-full h-0 pb-[100%]'></div>
-            <div className='flex justify-between'>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+          <div className="grow shrink-0 basis-0 max-w-full h-full z-50">
+            <div className="site-col block relative w-full h-0 pb-[100%]"></div>
+            <div className="flex justify-between">
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 NFT World
               </span>
-              <span className='font-Outfit font-light text-base dark:text-white text-black'>
+              <span className="font-Outfit font-light text-base dark:text-white text-black">
                 #???
               </span>
             </div>
           </div>
         </div>
       </footer>
-      <div className='relative z-50 bg-white dark:bg-black h-[10vh] w-screen'></div>
+      <div className="relative z-50 bg-white dark:bg-black h-[10vh] w-screen"></div>
 
-      <audio id='nobSound' src='/static/music/nob.mp3'></audio>
+      <audio id="nobSound" src="/static/music/nob.mp3"></audio>
     </Fragment>
   );
 }
