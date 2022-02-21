@@ -399,7 +399,10 @@ export default function Home() {
     <Fragment>
       <Head>
         <title>BrokeTopia | NFTWorlds Metropolis</title>
-        <meta name="description" content="NFT Games" />
+        <meta
+          name="description"
+          content="BrokeTopia is a massive open-world of a modern multicultural metropolis that sets new standards in terms of visuals,complexity, and depth."
+        />
         <link rel="icon" href="/favicon.png" />
         <meta property="og:title" content="BrokeTopia | NFTWorlds Metropolis" />
         <meta property="og:url" content="https://broketopia.net" />
