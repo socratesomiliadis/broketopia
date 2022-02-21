@@ -408,7 +408,7 @@ export default function Home() {
           property="og:description"
           content="BrokeTopia is a massive open-world of a modern multicultural metropolis that sets new standards in terms of visuals,complexity, and depth."
         />
-        <meta property="og:image" content="/ShareThumb.png" />
+        <meta property="og:image" content="/social.png" />
       </Head>
 
       <motion.div
