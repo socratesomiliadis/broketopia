@@ -398,9 +398,17 @@ export default function Home() {
   return (
     <Fragment>
       <Head>
-        <title>BrokeTopia | NFT Minecraft World</title>
+        <title>BrokeTopia | NFTWorlds Metropolis</title>
         <meta name="description" content="NFT Games" />
         <link rel="icon" href="/favicon.png" />
+        <meta property="og:title" content="BrokeTopia | NFTWorlds Metropolis" />
+        <meta property="og:url" content="https://broketopia.net" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="BrokeTopia is a massive open-world of a modern multicultural metropolis that sets new standards in terms of visuals,complexity, and depth."
+        />
+        <meta property="og:image" content="/ShareThumb.png" />
       </Head>
 
       <motion.div
