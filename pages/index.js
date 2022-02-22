@@ -413,8 +413,13 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://broketopia.net/ShareThumb.png"
+          content="https://broketopia.vercel.app/ShareThumb.png"
         />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="900" />
+        <meta property="og:image:alt" content="broketopia" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <motion.div
