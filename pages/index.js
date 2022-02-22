@@ -413,7 +413,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://broketopia.vercel.app/ShareThumb.png"
+          content="https://broketopia.net/ShareThumb.png"
         />
         <meta property="og:image:width" content="1600" />
         <meta property="og:image:height" content="900" />
